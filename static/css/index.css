@@ -1,0 +1,36 @@
+body {
+  background: #A06B9A;
+}
+h1 {
+    color: #8D9EC6;
+}
+nav ul{
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+nav li{
+  display: inline;
+  margin-right: 40px;
+}
+#box {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    height:100%;
+}
+.round_image {
+  border-radius: 50%;
+  max-height: 200px;
+  max-width: 200px;
+  vertical-align: center;
+  position:center;
+
+}
+.span9 {
+  vertical-align: center;
+
+}
+#person {
+  display: inline-block;
+  padding: 20px;
+}
