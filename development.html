@@ -3,26 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>development</title>
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="current">home</a></li>
-        <li><a href="requirements.html">requirements</a></li>
-        <li><a href="development.html">development</a></li>
-        <li><a href="prototypes.html">prototypes</a></li>
-        <li><a href="testing.html">testing</a></li>
-        <li><a href="meta.html">meta</a></li>
-        <li><a href="repo.html">repo</a></li>
-      </ul>
-    </nav>
-    <table border ="2" width="800" cellpadding="10" cellspacing="5">
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"><i class="material-icons">my_location</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="home.html">home</a></li>
+            <li><a href="requirements.html">requirements</a></li>
+            <li><a href="development.html" class="current">development</a></li>
+            <li><a href="prototypes.html">prototypes</a></li>
+            <li><a href="testing.html">testing</a></li>
+            <li><a href="meta.html">meta</a></li>
+            <li><a href="repo.html">repo</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h2>Use cases</h2>
+    <table class="bordered" width="800" cellpadding="10" cellspacing="5">
+      <thread>
       <tr>
         <th width="300"></th>
         <th scope="col" width="300">1</th>
         <th scope="col" width="300">2</th>
         <th scope="col" width="300">3</th>
       </tr>
+    </thread>
       <tr>
         <th scope="row">Use case:</th>
           <td>Push notifications</td>
@@ -76,5 +87,9 @@
           </td>
       </tr>
     </table>
+    <h2>Recommendation engine</h2>
+    <main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    </main>
   </body>
 </html>
