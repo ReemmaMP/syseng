@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>development</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="current">home</a></li>
+        <li><a href="requirements.html">requirements</a></li>
+        <li><a href="development.html">development</a></li>
+        <li><a href="prototypes.html">prototypes</a></li>
+        <li><a href="testing.html">testing</a></li>
+        <li><a href="meta.html">meta</a></li>
+        <li><a href="repo.html">repo</a></li>
+      </ul>
+    </nav>
+    <table border ="2" width="800" cellpadding="10" cellspacing="5">
+      <tr>
+        <th width="300"></th>
+        <th scope="col" width="300">1</th>
+        <th scope="col" width="300">2</th>
+        <th scope="col" width="300">3</th>
+      </tr>
+      <tr>
+        <th scope="row">Use case:</th>
+          <td>Push notifications</td>
+      </tr>
+      <tr>
+          <th scope="row">ID:</th>
+          <td>-</td>
+      </tr>
+      <tr>
+        <th scope="">Brief description</th>
+          <td>The main feature of the application that alerts the user when they are walking past a historical monument.</td>
+      </tr>
+      <tr>
+      <th scope="">Primary actors </th>
+        <td>The phone</td>
+      </tr>
+      <tr>
+        <th scope="">Secondary actors</th>
+          <td>The application</td>
+      </tr>
+      <tr>
+        <th scope="">Preconditions (the system state before the use case can begin)</th>
+          <td>
+            <ul>
+              <li>Connected to Wi-Fi or active network</li>
+              <li>Geolocation can be tracked and pinpointed to a specific point</li>
+            </ul>
+          </td>
+      </tr>
+      <tr>
+        <th scope="">Main flow (the actual steps of the use case)</th>
+          <td>
+            <ul>
+              <li>Location noted</li>
+              <li>Retrieve information about the surroundings from the database</li>
+            </ul>
+          </td>
+      </tr>
+      <tr>
+        <th scope="">Postconditions (the system state when the use case is finished)</th>
+          <td>Notification pushed to the user</td>
+      </tr>
+      <tr>
+        <th scope="">Alternative flows</th>
+          <td>
+            <ul>
+              <li>Calendar indicates that the user is currently busy so the notification is not sent</li>
+              <li>Wifi connection lost so notification is not pushed- hopefully deleted </li>
+              <li>Frequency is set to a minimum so the notification is deleted if a certain number of notifications have already been pushed</li>
+            </ul>
+          </td>
+      </tr>
+    </table>
+  </body>
+</html>

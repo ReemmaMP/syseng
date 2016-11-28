@@ -12,6 +12,19 @@ nav li{
   display: inline;
   margin-right: 40px;
 }
+nav li a{
+  color: rgb(21, 29, 204);
+}
+nav li a{
+  a: hover, nav li a.current{
+    color: rgb(204, 166, 27);
+  }
+  section.courses{
+    float: left;
+    width: 659px;
+    border-right: 1px solid rgb(3, 0, 143);
+  }
+}
 #box {
     width: 800px;
     margin-left: auto;
