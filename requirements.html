@@ -13,7 +13,7 @@
     <header>
       <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo"><i class="material-icons">my_location</i></a>
+          <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="home.html" class="current">home</a></li>
             <li><a href="requirements.html">requirements</a></li>
@@ -26,211 +26,212 @@
         </div>
       </nav>
     </header>
-    <h2>MoSCoW Report</h2>
-    <h3>Final MoSCoW report</h3>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.collapsible').collapsible({
-            accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-            onOpen: function(el) { alert('Open'); }, // Callback for Collapsible open
-            onClose: function(el) { alert('Closed'); } // Callback for Collapsible close
-          }
-        );
-    </script>
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Must have</div>
-          <div class="collapsible-body">
-          <p>(These are the absolute minimum requirements that we will strive to meet during this project)</p>
-            <p>
-              <ul style="padding: 40px;">
-                <li>Cross-platform app – it must work on both Android and iOS</li>
-                <li>C# Xamarin code-base </li>
-                <li>Geolocation features to locate the user, possibly using Bing Maps API</li>
-                <li>Integration with the Recommendation Engine/API</li>
-                <li>Database of landmarks/ places of attraction- have it running, not build (Azure table storage)</li>
-              </ul>
-            </p>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Should have</div>
-          <div class="collapsible-body">
-            <p>(Once we have implemented the Must haves, we will focus on these primarily)</p>
-              <p>
-                <ul style="padding: 40px;">
-                  <li>A clean User Interface</li>
-                  <li>Ability to push notifications</li>
-                  <li>An interface for Kent County council to add/approve places of interest</li>
-                  <li>A weather checking function </li>
-              </ul>
-            </p>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Could have</div>
-          <div class="collapsible-body">
-            <p>(If we had spare time on the project once we have implemented all Must haves and most Should haves, we will try and include the following features)</p>
-              <p>
-                <ul style="padding: 40px;">
-                  <li>Support for wearables</li>
-                  <li>Battery Optimization</li>
-                  <li>Be an extension of the existing project</li>
-                  <li>A method of tuning the frequency of the push notifications received by the user</li>
-                  <li>Recommendation feature that can be used to plan ahead</li>
-                  <li>Calendar integration</li>
-                  <li>Check + decrease/increase radius depending on location + no of points of interest</li>
-              </ul>
-            </p>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Won't (necessarily) have</div>
-          <div class="collapsible-body">
-            <p>The following won't be an expectation from this project</p>
-              <p>
-                <ul style="padding: 40px;">
-                  <li>Bot integration to make it more interactive</li>
-                  <li>A description of the attraction or ability to expands into a full page of information</li>
-                  <li>Integration with beacons</li>
-                  <li>Any additional machine learning</li>
-                  <li>Windows phone support</li>
-              </ul>
-            </p>
-        </div>
-      </li>
-    </ul>
-    <h3>Changes in MoSCoW report</h3>
-    <ul>
-      <li>- Our initial brief was to create a tourist 'layer' which gaave us the option to create 2 things: an app or a bot. After conducting a heavy amount of research, through weighing the pros and cons of each, we decided to create the app.</li>
-      <li>- Initially we were planning to use the reccomendation engine and build on top of it. However, since we ended up spending too much time trying to get it to work, we had to move on from it and focus on actually creating an app. </li>
-    </ul>
-    <h2>Use cases</h2>
-    <table class="bordered" width="800" cellpadding="10" cellspacing="5">
-      <thread>
-      <tr>
-        <th width="300"></th>
-        <th scope="col" width="300">1</th>
-        <th scope="col" width="300">2</th>
-        <th scope="col" width="300">3</th>
-      </tr>
-    </thread>
-      <tr>
-        <th scope="row">Use case:</th>
-          <td>Push notifications</td>
-          <td>Geolocation</td>
-          <td>Weather checker</td>
-      </tr>
-      <tr>
-          <th scope="row">ID:</th>
-          <td>-</td>
-          <td>-</td>
-      </tr>
-      <tr>
-        <th scope="">Brief description</th>
-          <td>The main feature of the application that alerts the user when they are walking past a historical monument.</td>
-          <td>Geolocation feature to detect the location of the user</td>
-          <td>User had the option to check the weather using a button</td>
-      </tr>
-      <tr>
-      <th scope="">Primary actors </th>
-        <td>The phone</td>
-        <td>The user</td>
-        <td>Users</td>
-      </tr>
-      <tr>
-        <th scope="">Secondary actors</th>
-          <td>The application</td>
-          <td>The application</td>
-          <td>-</td>
-      </tr>
-      <tr>
-        <th scope="">Preconditions (the system state before the use case can begin)</th>
-          <td>
-            <ul>
-              <li>Connected to Wi-Fi or active network</li>
-              <li>Geolocation can be tracked and pinpointed to a specific point</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>The user need to have GPS enabled</li>
-              <li>Must be connected to internet/wifi on their mobile device</li>
-            </ul>
-          </td>
-          <td>Must be connected to internet/wifi on their mobile device</td>
-      </tr>
-      <tr>
-        <th scope="">Main flow (the actual steps of the use case)</th>
-          <td>
-            <ul>
-              <li>Location noted</li>
-              <li>Retrieve information about the surroundings from the database</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>User location detected</li>
-              <li>This information is used to retrieve information from the database.</li>
-              <li>The user location is used as a filter criteria.</li>
-              <li>The app will show all modules that satisfy the filter.</li>
-              <li>The user can scroll through list of available options (of places to visit).</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Use case initiated when the user clicks the 'check weather' button.</li>
-              <li>API call requested and returns with realtime weather data.</li>
-              <li>Data displayed to user.</li>
-            </ul>
-          </td>
-      </tr>
-      <tr>
-        <th scope="">Postconditions (the system state when the use case is finished)</th>
-          <td>Notification pushed to the user</td>
-          <td>The modules are displays as per the parameters of the filter</td>
-          <td>Shows weather for the day</td>
-      </tr>
-      <tr>
-        <th scope="">Alternative flows</th>
-          <td>
-            <ul>
-              <li>Calendar indicates that the user is currently busy so the notification is not sent</li>
-              <li>Wifi connection lost so notification is not pushed- hopefully deleted </li>
-              <li>Frequency is set to a minimum so the notification is deleted if a certain number of notifications have already been pushed</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>Location not found</li>
-              <li>No places to visit nearby</li>
-              <li>Widen the radius of search until app is able to show modules</li>
-            </ul>
-          </td>
-          <td>"Unable to get details"</td>
-      </tr>
-      <tr>
-        <th scope="">Trigger</th>
-          <td>When you walk past a building/approaching a building, details of your location is constantly being send to the database. When you receive a response from the database, then the push notification is triggered</td>
-          <td>Connected to phone network</td>
-          <td>Button click</td>
-      </tr>
-      <tr>
-        <th scope="">Error flows</th>
-          <td>
-            <ul>
-              <li>Lose connection</li>
-              <li>When a notification is pushed but the user is too far from the place of interest</li>
-            </ul>
-          </td>
-          <td>Location not found</td>
-          <td>Trouble connecting to internet</td>
-      </tr>
-    </table>
-    <h3>HCI considerations</h3>
-      <h4>Personas</h4>
-      <h4>Scenarios</h4>
     <main>
+      <h2>MoSCoW Report</h2>
+      <h3>Final MoSCoW report</h3>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.collapsible').collapsible({
+              accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+              onOpen: function(el) { alert('Open'); }, // Callback for Collapsible open
+              onClose: function(el) { alert('Closed'); } // Callback for Collapsible close
+            }
+          );
+      </script>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>Must have</div>
+            <div class="collapsible-body">
+            <p>(These are the absolute minimum requirements that we will strive to meet during this project)</p>
+              <p>
+                <ul style="padding: 40px;">
+                  <li>Cross-platform app – it must work on both Android and iOS</li>
+                  <li>C# Xamarin code-base </li>
+                  <li>Geolocation features to locate the user, possibly using Bing Maps API</li>
+                  <li>Integration with the Recommendation Engine/API</li>
+                  <li>Database of landmarks/ places of attraction- have it running, not build (Azure table storage)</li>
+                </ul>
+              </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>Should have</div>
+            <div class="collapsible-body">
+              <p>(Once we have implemented the Must haves, we will focus on these primarily)</p>
+                <p>
+                  <ul style="padding: 40px;">
+                    <li>A clean User Interface</li>
+                    <li>Ability to push notifications</li>
+                    <li>An interface for Kent County council to add/approve places of interest</li>
+                    <li>A weather checking function </li>
+                </ul>
+              </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>Could have</div>
+            <div class="collapsible-body">
+              <p>(If we had spare time on the project once we have implemented all Must haves and most Should haves, we will try and include the following features)</p>
+                <p>
+                  <ul style="padding: 40px;">
+                    <li>Support for wearables</li>
+                    <li>Battery Optimization</li>
+                    <li>Be an extension of the existing project</li>
+                    <li>A method of tuning the frequency of the push notifications received by the user</li>
+                    <li>Recommendation feature that can be used to plan ahead</li>
+                    <li>Calendar integration</li>
+                    <li>Check + decrease/increase radius depending on location + no of points of interest</li>
+                </ul>
+              </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>Won't (necessarily) have</div>
+            <div class="collapsible-body">
+              <p>The following won't be an expectation from this project</p>
+                <p>
+                  <ul style="padding: 40px;">
+                    <li>Bot integration to make it more interactive</li>
+                    <li>A description of the attraction or ability to expands into a full page of information</li>
+                    <li>Integration with beacons</li>
+                    <li>Any additional machine learning</li>
+                    <li>Windows phone support</li>
+                </ul>
+              </p>
+          </div>
+        </li>
+      </ul>
+      <h3>Changes in MoSCoW report</h3>
+      <ul>
+        <li>- Our initial brief was to create a tourist 'layer' which gaave us the option to create 2 things: an app or a bot. After conducting a heavy amount of research, through weighing the pros and cons of each, we decided to create the app.</li>
+        <li>- Initially we were planning to use the reccomendation engine and build on top of it. However, since we ended up spending too much time trying to get it to work, we had to move on from it and focus on actually creating an app. </li>
+      </ul>
+      <h2>Use cases</h2>
+      <table class="bordered" width="800" cellpadding="10" cellspacing="5">
+        <thread>
+        <tr>
+          <th width="300"></th>
+          <th scope="col" width="300">1</th>
+          <th scope="col" width="300">2</th>
+          <th scope="col" width="300">3</th>
+        </tr>
+      </thread>
+        <tr>
+          <th scope="row">Use case:</th>
+            <td>Push notifications</td>
+            <td>Geolocation</td>
+            <td>Weather checker</td>
+        </tr>
+        <tr>
+            <th scope="row">ID:</th>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+          <th scope="">Brief description</th>
+            <td>The main feature of the application that alerts the user when they are walking past a historical monument.</td>
+            <td>Geolocation feature to detect the location of the user</td>
+            <td>User had the option to check the weather using a button</td>
+        </tr>
+        <tr>
+        <th scope="">Primary actors </th>
+          <td>The phone</td>
+          <td>The user</td>
+          <td>Users</td>
+        </tr>
+        <tr>
+          <th scope="">Secondary actors</th>
+            <td>The application</td>
+            <td>The application</td>
+            <td>-</td>
+        </tr>
+        <tr>
+          <th scope="">Preconditions (the system state before the use case can begin)</th>
+            <td>
+              <ul>
+                <li>Connected to Wi-Fi or active network</li>
+                <li>Geolocation can be tracked and pinpointed to a specific point</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>The user need to have GPS enabled</li>
+                <li>Must be connected to internet/wifi on their mobile device</li>
+              </ul>
+            </td>
+            <td>Must be connected to internet/wifi on their mobile device</td>
+        </tr>
+        <tr>
+          <th scope="">Main flow (the actual steps of the use case)</th>
+            <td>
+              <ul>
+                <li>Location noted</li>
+                <li>Retrieve information about the surroundings from the database</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>User location detected</li>
+                <li>This information is used to retrieve information from the database.</li>
+                <li>The user location is used as a filter criteria.</li>
+                <li>The app will show all modules that satisfy the filter.</li>
+                <li>The user can scroll through list of available options (of places to visit).</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Use case initiated when the user clicks the 'check weather' button.</li>
+                <li>API call requested and returns with realtime weather data.</li>
+                <li>Data displayed to user.</li>
+              </ul>
+            </td>
+        </tr>
+        <tr>
+          <th scope="">Postconditions (the system state when the use case is finished)</th>
+            <td>Notification pushed to the user</td>
+            <td>The modules are displays as per the parameters of the filter</td>
+            <td>Shows weather for the day</td>
+        </tr>
+        <tr>
+          <th scope="">Alternative flows</th>
+            <td>
+              <ul>
+                <li>Calendar indicates that the user is currently busy so the notification is not sent</li>
+                <li>Wifi connection lost so notification is not pushed- hopefully deleted </li>
+                <li>Frequency is set to a minimum so the notification is deleted if a certain number of notifications have already been pushed</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Location not found</li>
+                <li>No places to visit nearby</li>
+                <li>Widen the radius of search until app is able to show modules</li>
+              </ul>
+            </td>
+            <td>"Unable to get details"</td>
+        </tr>
+        <tr>
+          <th scope="">Trigger</th>
+            <td>When you walk past a building/approaching a building, details of your location is constantly being send to the database. When you receive a response from the database, then the push notification is triggered</td>
+            <td>Connected to phone network</td>
+            <td>Button click</td>
+        </tr>
+        <tr>
+          <th scope="">Error flows</th>
+            <td>
+              <ul>
+                <li>Lose connection</li>
+                <li>When a notification is pushed but the user is too far from the place of interest</li>
+              </ul>
+            </td>
+            <td>Location not found</td>
+            <td>Trouble connecting to internet</td>
+        </tr>
+      </table>
+      <h3>HCI considerations</h3>
+        <h4>Personas</h4>
+        <h4>Scenarios</h4>
+      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     </main>
   </body>
