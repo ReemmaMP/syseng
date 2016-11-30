@@ -20,7 +20,7 @@ h1 {
     font-weight: bold;
 }
 h2 {
-    text-align: center;;
+    text-align: center;
     font-family: "Times New Roman", Times, serif;
     font-size: 40px;
     font-weight: bold;
@@ -35,6 +35,18 @@ h4 {
     text-align: left;
     font-family: "Times New Roman", Times, serif;
     font-size: 10px;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px !important;
+}
+li {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px !important;
+}
+tr {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px !important;
 }
 body {
   margin-left: auto;
@@ -71,5 +83,11 @@ body {
   margin: 1%;
 }
 nav {
-  background-color: rgb(91, 93, 237) !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 30px !important;
+}
+.column1, .column2, .column3{
+  width: 31.3%;
+  float: left;
+  margin: 1%;
 }
