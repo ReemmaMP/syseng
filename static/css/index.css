@@ -13,53 +13,56 @@ h3 {
     color: #8D9EC6;
     font-size: 30px;
 }*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 h1 {
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Roboto", "Times New Roman", Times, serif;
     font-size: 50px;
     font-weight: bold;
 }
 h2 {
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Roboto", "Times New Roman", Times, serif;
     font-size: 40px;
     font-weight: bold;
 }
 h3 {
     text-align: left;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Roboto", "Times New Roman", Times, serif;
     font-size: 20px;
     font-weight: bold;
 }
 h4 {
     text-align: left;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Roboto", "Times New Roman", Times, serif;
     font-size: 10px;
 }
 p {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px !important;
+  font-family: "Roboto", "Times New Roman", Times, serif;
+  font-size: 16px !important;
 }
 li {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px !important;
+  font-family: "Roboto", "Times New Roman", Times, serif;
 }
 tr {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Roboto", "Times New Roman", Times, serif;
   font-size: 20px !important;
 }
 body {
-  margin-left: auto;
-  margin-right: auto;
-  align: center;
-  padding: 40px;
-  padding-right: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-family: "Roboto";
 }
 #box {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
     height:100%;
+}
+main
+{
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .round_image {
   border-radius: 50%;
@@ -83,8 +86,10 @@ body {
   margin: 1%;
 }
 nav {
-  font-family: "Times New Roman", Times, serif !important;
+  background-color: rgb(91, 93, 237) !important;
   font-size: 30px !important;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .column1, .column2, .column3{
   width: 31.3%;
