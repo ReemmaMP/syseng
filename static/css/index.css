@@ -39,7 +39,7 @@ h4 {
 }
 p {
   font-family: "Roboto", "Times New Roman", Times, serif;
-  font-size: 16px !important;
+  font-size: 21px !important;
 }
 li {
   font-family: "Roboto", "Times New Roman", Times, serif;
@@ -52,6 +52,9 @@ body {
   padding-left: 0px;
   padding-right: 0px;
   font-family: "Roboto";
+}
+ul {
+  font-size: 21px
 }
 #box {
     width: 800px;
