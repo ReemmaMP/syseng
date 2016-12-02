@@ -1,6 +1,7 @@
-/*body {
-  background: white;
+body {
+  /*background: #7CBB00;*/
 }
+/*
 h1 {
     color: #8D9EC6;
     font-size: 80px;
@@ -105,8 +106,8 @@ main
   margin: 1%;
 }
 nav {
-
-  font-size: 30px !important;
+  /*background-color: #00A1F1 !important;*/
+  font-size: 50px !important;
   padding-left: 15px;
   padding-right: 15px;
 }
