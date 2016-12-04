@@ -102,7 +102,7 @@ main
 }
 
 nav {
-  /*background-color: #00A1F1 !important;*/
+  background-color: #00A1F1 !important;
   font-size: 50px !important;
   padding-left: 15px;
   padding-right: 15px;
@@ -111,4 +111,7 @@ nav {
   width: 22%;
   float: left;
   margin: 1%;
+}
+.page-footer{
+  background-color: #00A1F1 !important;
 }
