@@ -136,6 +136,7 @@
           <th scope="col" width="300">1</th>
           <th scope="col" width="300">2</th>
           <th scope="col" width="300">3</th>
+          <th scope="col" width="300">4</th>
         </tr>
       </thread>
         <tr>
@@ -143,9 +144,11 @@
             <td>Push notifications</td>
             <td>Geolocation</td>
             <td>Weather checker</td>
+            <td>Viewing map</td>
         </tr>
         <tr>
             <th scope="row">ID:</th>
+            <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -155,17 +158,20 @@
             <td>The main feature of the application that alerts the user when they are walking past a historical monument.</td>
             <td>Geolocation feature to detect the location of the user</td>
             <td>User had the option to check the weather using a button</td>
+            <td>User had the option to view the map using a button</td>
         </tr>
         <tr>
         <th scope="">Primary actors </th>
           <td>The phone</td>
           <td>The user</td>
           <td>Users</td>
+          <td>Users</td>
         </tr>
         <tr>
           <th scope="">Secondary actors</th>
             <td>The application</td>
             <td>The application</td>
+            <td>-</td>
             <td>-</td>
         </tr>
         <tr>
@@ -183,6 +189,13 @@
               </ul>
             </td>
             <td>Must be connected to internet/wifi on their mobile device</td>
+            <td>
+              <ul>
+                <li>Must be connected to internet/wifi on their mobile device.</li>
+                <li>Map downloaded from google.</li>
+                <li>User location detected.</li>
+              </ul>
+              </td>
         </tr>
         <tr>
           <th scope="">Main flow (the actual steps of the use case)</th>
@@ -208,12 +221,22 @@
                 <li>Data displayed to user.</li>
               </ul>
             </td>
+            <td>
+              <ul>
+                <li>Use case initiated when the user clicks the 'View map' button.</li>
+                <li>API call requested and returns with map based on location.</li>
+                <li>Place marker on map displayed.</li>
+                <li>The user can have street view.</li>
+                <li>The user can view direction by launching the google map.</li>
+              </ul>
+              </td>
         </tr>
         <tr>
           <th scope="">Postconditions (the system state when the use case is finished)</th>
             <td>Notification pushed to the user</td>
             <td>The modules are displays as per the parameters of the filter</td>
             <td>Shows weather for the day</td>
+            <td>Shows map based on the location</td>
         </tr>
         <tr>
           <th scope="">Alternative flows</th>
@@ -232,11 +255,13 @@
               </ul>
             </td>
             <td>"Unable to get details"</td>
+            <td>-</td>
         </tr>
         <tr>
           <th scope="">Trigger</th>
             <td>When you walk past a building/approaching a building, details of your location is constantly being send to the database. When you receive a response from the database, then the push notification is triggered</td>
             <td>Connected to phone network</td>
+            <td>Button click</td>
             <td>Button click</td>
         </tr>
         <tr>
@@ -249,6 +274,12 @@
             </td>
             <td>Location not found</td>
             <td>Trouble connecting to internet</td>
+            <td>
+              <ul>
+              <li>Lose connection</li>
+              <li>Location not found</li>
+              </ul>
+              </td>
         </tr>
       </table>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
