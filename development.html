@@ -117,7 +117,7 @@
                 <span class="card-title">SpotMarketML error 1</span>
                 <br>
                 <p>It appears as though there is some sort of Flask project in this repository. Opening the Visual Studio solution doesn’t appear to load all the files (is the project broken?)</p>
-                <img class="img-responsive" src="static/img/SpotMarketML.jpg"/>
+                <img style="width: 100%"  src="static/img/SpotMarketML.jpg"/>
               </div>
 
             </div>
@@ -130,7 +130,7 @@
                 <span class="card-title">SpotMarketML error 2</span>
                 <br>
                 <p>We have been following the Matchbox Recommender deployment guide. Unfortunately, we were stuck on this bit:</p>
-                <img class="img-responsive" src="static/img/flask.jpg"/>
+                <img style="width: 100%"  src="static/img/flask.jpg"/>
               </div>
 
             </div>
@@ -143,7 +143,7 @@
                 <span class="card-title">SpotMarketML error 3</span>
                 <br>
                 <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.</p>
-                <img class="img-responsive" src="static/img/errors.jpg"/>
+                <img style="width: 100%"  src="static/img/errors.jpg"/>
               </div>
 
             </div>
@@ -156,7 +156,7 @@
                 <span class="card-title">SpotMarketML error 4</span>
                 <br>
                 <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.</p>
-                <img class="img-responsive" src="static/img/module.jpg"/>
+                <img style="width: 100%"  src="static/img/module.jpg"/>
               </div>
 
             </div>
@@ -171,7 +171,7 @@
                   <br>
                   <p>This project out the box from VSTS will not compile under VS2015. I’m not sure if this is because we have an old version of the code, but there is a non-fully-implemented interface by default. This is in Droid/Controllers/SaveAndLoadController.cs.
                     In order to make this compile the following diff was applied:</p>
-                  <img class="img-responsive" src="static/img/hsConsumer.jpg"/>
+                  <img style="width: 100%"  src="static/img/hsConsumer.jpg"/>
                   <p>We just commented out the default NotImplementedException, but it does not matter as even if we set a breakpoint on that line it is never hit anyway.
 
                     This change appears to make the code compile, but it immediately crashes upon launch in the Android simulator. We have targeted Android 4.4 and 6.0.1 using the latest build tools and SDKs available from Microsoft and Google, including all the latest Xamarin updates. We have also cleared out various Xamarin caches. Even getting it to build was triggering weird Visual Studio errors about not being able to find the SDK but the cache clearing fixed that.
