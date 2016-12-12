@@ -11,20 +11,22 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="nav-wrapper">
-          <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="home.html" class="current">home</a></li>
-            <li class="active"><a href="requirements.html">requirements</a></li>
-            <li><a href="development.html">development</a></li>
-            <li><a href="prototypes.html">prototypes</a></li>
-            <li><a href="testing.html">testing</a></li>
-            <li><a href="meta.html">meta</a></li>
-            <li><a href="repo.html">repo</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="home.html" class="current">home</a></li>
+              <li class="active"><a href="requirements.html">requirements</a></li>
+              <li><a href="development.html">development</a></li>
+              <li><a href="prototypes.html">prototypes</a></li>
+              <li><a href="testing.html">testing</a></li>
+              <li><a href="meta.html">meta</a></li>
+              <li><a href="repo.html">repo</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
     </header>
     <main>
       <h2>MoSCoW Report</h2>
@@ -41,7 +43,7 @@
       <ul class="collapsible" data-collapsible="accordion" style="width:70%;" align="left">
         <li>
           <div class="collapsible-header"><i class="material-icons">done_all</i>Must haves</div>
-            <div class="collapsible-body">
+            <div class="collapsible-body" style="text-align: left !important;">
               <p>
                 (These are the absolute minimum requirements that we will strive to meet during this project. Fulfilling each of these requirements will constitute success for the project.)<br><br>
                 <strong>Cross-Platform app – it must work on both Android and iOS</strong><br>
@@ -59,7 +61,7 @@
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons">done_all</i>Should haves</div>
-            <div class="collapsible-body">
+            <div class="collapsible-body" style="text-align: left !important;">
               <p>
                 (Once we have implemented the Must Haves, we will focus on these features)<br><br>
                 <strong>A Clean User Interface</strong><br>
@@ -75,7 +77,7 @@
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons">done_all</i>Could Haves</div>
-            <div class="collapsible-body">
+            <div class="collapsible-body" style="text-align: left !important;">
               <p>
                 (If we have spare time on the project once we have implemented all Must Haves and most Should Haves, we will try to implement these features)<br><br>
                 <strong>Support for Wearables</strong><br>
@@ -96,8 +98,8 @@
           </div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">done_all</i>Won't (Necessarily) Haves</div>
-            <div class="collapsible-body">
+          <div class="collapsible-header"><i class="material-icons">done_all</i>Won't (Necessarily) Have</div>
+            <div class="collapsible-body" style="text-align: left !important;">
               <p>
                 (These features were either discussed with the clients or discussed internally as a group but, due to scope and time restrictions, they are not expectated to feature in our project's submission)<br><br>
                 <strong>Bot integration to make it more interactive</strong><br>
@@ -116,13 +118,17 @@
       </ul>
     </div>
       <h3>Changes in MoSCoW report</h3>
+      <p style="padding-right: 220px;padding-left: 220px;font-size:18px !important;">The initial set of MoSCoW requirements were made based on our understanding of the cleint requests; we then re-consulted our clients to fix upon these requirements. We also took user's perspective into consideration through evaluating the heuristics based on our interaction with the prototype of the app. Through the various iterations, we were able to improve user experience at each stage.<p>
       <div class="row" align="center">
         <div class="card-panel hoverable" style="width:70%;" align="left">
           <span class="black-text">
             <ul>
               <li>- Our initial brief was to create a tourist 'layer' which gave us the option to create 2 things: an app or a bot. After conducting a heavy amount of research, through weighing the pros and cons of each, we decided to create the app.</li>
+              <br>
               <li>- Initially we were planning to use the reccomendation engine and build on top of it. However, since we ended up spending too much time trying to get it to work, we had to move on from it and focus on actually creating an app. </li>
+              <br>
               <li>- Window's phone support was initially included in the 'could have' section. It was decided to be scrapped after considering user needs, for current purposes, the clients and our team unanimously decided to focus on android and iOS.</li>
+              <br>
               <li>- Initially we intrusted to build on top of work produced by previous students. Due to the difficulty in transition and lack of clarity in the documentation provided, we agreed to keep the projects indepenedent until we could produce a sufficient amount of our own work.</li>
             </ul>
           </span>

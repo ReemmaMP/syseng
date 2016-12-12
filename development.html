@@ -6,25 +6,79 @@
     <link rel="stylesheet" href="static/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="nav-wrapper">
-          <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="home.html" class="current">home</a></li>
-            <li><a href="requirements.html">requirements</a></li>
-            <li class="active"><a href="development.html">development</a></li>
-            <li><a href="prototypes.html">prototypes</a></li>
-            <li><a href="testing.html">testing</a></li>
-            <li><a href="meta.html">meta</a></li>
-            <li><a href="repo.html">repo</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="home.html" class="current">home</a></li>
+              <li><a href="requirements.html">requirements</a></li>
+              <li class="active"><a href="development.html">development</a></li>
+              <li><a href="prototypes.html">prototypes</a></li>
+              <li><a href="testing.html">testing</a></li>
+              <li><a href="meta.html">meta</a></li>
+              <li><a href="repo.html">repo</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
+      <br>
+      <!-- Modal Trigger -->
+      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">Why Xamarin?</button></center></h4>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Why did we choose Xamarin?</h4>
+          <p>Since the requirement was to create a cross-platform app, we explaored the various framework that were available to us. This included: </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+      </div>
+      <!-- Modal Trigger -->
+      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">Build, setup and configure</button></center></h4>
+
+      <!-- Modal Structure -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>How to build, setup and configure the platform?</h4>
+          <p>Explain</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+      </div>
+      <!-- Modal Trigger -->
+      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">What are the different layers?</button></center></h4>
+
+      <!-- Modal Structure -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <h4>What are the different layers?</h4>
+          <p>Explain the following: The layers identified (e.g., hardware, OS, library/framework,
+          application) and how they communicate with each other.
+           The public APIs that your platform and/or OS make available to
+          allow the application to be written.
+           Identification of what has been adapted from the open source
+          community and what is to be newly developed or configured.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+      });
+      </script>
       <h2 style="text-align: center;">Recommendation engine</h2>
       <h3>Problems faced and resolutions</h3>
         <h4>SpotMarketML</h4>
@@ -37,9 +91,7 @@
                 <p>It appears as though there is some sort of Flask project in this repository. Opening the Visual Studio solution doesn’t appear to load all the files (is the project broken?)</p>
                 <img style="width: 100%" src="static/img/SpotMarketML.jpg"/>
               </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
+
             </div>
           </div>
         </div>
@@ -52,9 +104,7 @@
                 <p>We have been following the Matchbox Recommender deployment guide. Unfortunately, we were stuck on this bit:</p>
                 <img style="width: 100%" src="static/img/flask.jpg"/>
               </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
+
             </div>
           </div>
         </div>
@@ -67,9 +117,7 @@
                 <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.</p>
                 <img style="width: 100%" src="static/img/errors.jpg"/>
               </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
+
             </div>
           </div>
         </div>
@@ -82,9 +130,7 @@
                 <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.</p>
                 <img style="width: 100%" src="static/img/module.jpg"/>
               </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
+
             </div>
           </div>
         </div>
@@ -96,18 +142,16 @@
                   <span class="card-title">hsConsumer error</span>
                   <br>
                   <p>This project out the box from VSTS will not compile under VS2015. I’m not sure if this is because we have an old version of the code, but there is a non-fully-implemented interface by default. This is in Droid/Controllers/SaveAndLoadController.cs.
-  In order to make this compile the following diff was applied:</p>
+                    In order to make this compile the following diff was applied:</p>
                   <img style="width: 100%" src="static/img/hsConsumer.jpg"/>
                   <p>We just commented out the default NotImplementedException, but it does not matter as even if we set a breakpoint on that line it is never hit anyway.
 
-  This change appears to make the code compile, but it immediately crashes upon launch in the Android simulator. We have targeted Android 4.4 and 6.0.1 using the latest build tools and SDKs available from Microsoft and Google, including all the latest Xamarin updates. We have also cleared out various Xamarin caches. Even getting it to build was triggering weird Visual Studio errors about not being able to find the SDK but the cache clearing fixed that.
+                    This change appears to make the code compile, but it immediately crashes upon launch in the Android simulator. We have targeted Android 4.4 and 6.0.1 using the latest build tools and SDKs available from Microsoft and Google, including all the latest Xamarin updates. We have also cleared out various Xamarin caches. Even getting it to build was triggering weird Visual Studio errors about not being able to find the SDK but the cache clearing fixed that.
 
-  The most irritating sticking point here is that the application does not launch; it just crashes on open. There aren’t any error logs as the app doesn’t load far enough for the debugger to attach. We don’t have Hyper-V enabled on our laptop at the moment (as we were using VMware for some other work and only one hypervisor can be active at once).
-  At the moment we have no recommendation engine to build atop of (as it won’t deploy / run) and no current app to work off of or analyse (so we still don’t really have much idea of how the UX should be).</p>
+                    The most irritating sticking point here is that the application does not launch; it just crashes on open. There aren’t any error logs as the app doesn’t load far enough for the debugger to attach. We don’t have Hyper-V enabled on our laptop at the moment (as we were using VMware for some other work and only one hypervisor can be active at once).
+                    At the moment we have no recommendation engine to build atop of (as it won’t deploy / run) and no current app to work off of or analyse (so we still don’t really have much idea of how the UX should be).</p>
                 </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -247,15 +291,46 @@
               <td>4/10/16</td>
             </tr>
             <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
+              <td>2.</td>
+              <td>Created prototypes</td>
+              <td>Created prototypes of what the app would look like (full user interface) using a prototyping software. </td>
+              <td>The prototype shows what features the app would have and what pages we need and what the transition between the pages would look like.</td>
+              <td>Successful prototype up on the website</td>
+              <td>Reemma</td>
+              <td>20/11/16</td>
             </tr>
             <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>          </tbody>
+              <td>3.</td>
+              <td>Deploying database</td>
+              <td>Deploying the MongoDB database provided by Microsoft to Azure</td>
+              <td>Work in progress. When we first attempted this the Python would not run as we had been given an old version of the code that does not work. After consulting Microsoft we now have a better idea of how to do this.</td>
+              <td>Work in Progress</td>
+              <td>Chris</td>
+              <td>25/11/16</td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>Running basic application on emulator </td>
+              <td>Running basic application on emulator to check that the code and all extensions work</td>
+              <td>1>Exception in thread "main"
+                  1>java.lang.UnsupportedClassVersionError: com/android/dx/command/Main  :  Unsupported major.minor version 52.0
+                  1>Build FAILED.
+                  1>
+                  ========== Deploy: 0 succeeded, 1 failed, 0 skipped ========== </td>
+              <td>Build keeps failing</td>
+              <td>Reemma</td>
+              <td>1/12/16</td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>Heuristic evaluation</td>
+              <td>Carried out heuristic evaluations on the prototype to see if it fit a collection of standardised heuristics and then analysed each page of the app against it. </td>
+              <td>Successfully recognised modifications that can be made to the app to make the user interface more friendly for users</td>
+              <td>Successful</td>
+              <td>Reemma</td>
+              <td>8/12/16</td>
+            </tr>
+          </tbody>
         </table>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     </main>

@@ -6,24 +6,41 @@
     <link rel="stylesheet" href="static/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="nav-wrapper">
-          <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active"><a href="home.html" class="current">home</a></li>
-            <li><a href="requirements.html">requirements</a></li>
-            <li><a href="development.html">development</a></li>
-            <li><a href="prototypes.html">prototypes</a></li>
-            <li><a href="testing.html">testing</a></li>
-            <li><a href="meta.html">meta</a></li>
-            <li><a href="repo.html">repo</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="active"><a href="home.html" class="current">home</a></li>
+              <li><a href="requirements.html">requirements</a></li>
+              <li><a href="development.html">development</a></li>
+              <li><a href="prototypes.html">prototypes</a></li>
+              <li><a href="testing.html">testing</a></li>
+              <li><a href="meta.html">meta</a></li>
+              <li><a href="repo.html">repo</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
+
+    <div class="carousel">
+      <a class="carousel-item" href="#one!"><img width="50%"src="static/img/notification.jpg"/></a>
+      <a class="carousel-item" href="#two!"><img width="50%"src="static/img/generalInterest.jpg"/></a>
+      <a class="carousel-item" href="#three!"><img width="50%"src="static/img/placesOfInterest.jpg"/></a>
+      <a class="carousel-item" href="#four!"><img width="50%"src="static/img/settings.jpg"/></a>
+    </div>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+
+    </script>
       <h1 style="text-align: center;">COMP204P: Systems Engineering Team 7</h1>
       <h2 style="text-align: center;">Project Overview</h2>
       <div class="row" align="center">
