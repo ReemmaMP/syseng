@@ -36,7 +36,13 @@
       <div id="modal1" class="modal">
         <div class="modal-content">
           <h4>Why did we choose Xamarin?</h4>
-          <p>Since the requirement was to create a cross-platform app, we explaored the various framework that were available to us. This included: </p>
+          <p>Since the requirement was to create a cross-platform app, we had the choice of using either Xamarin or an HTML-wrapping framework such as Apache Cordova or PhoneGap. There were a few factors that pushed us toward Xamarin:
+            <ul>
+              <li>As this is a Microsoft-sponsored project, use of the Microsoft stack is encouraged (and preferred) by our clients.</li>
+              <li>Last year's work on this project was done in C# and Xamarin so it made sense to use this technology again in order to be able to re-use any code where possible</li>
+              <li>Writing the app in C# allows us to build a rich, native application rather than one that relies on an embedded web browser. This yields a UI that feels more native to the platform, complete with backend code re-use, as opposed to a Cordova app that looks the same on all platforms even if that breaks each given platform's design guidelines.</li>
+            </ul>
+          </p>
         </div>
         <div class="modal-footer">
           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
