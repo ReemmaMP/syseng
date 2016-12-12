@@ -142,14 +142,14 @@
                   <span class="card-title">hsConsumer error</span>
                   <br>
                   <p>This project out the box from VSTS will not compile under VS2015. I’m not sure if this is because we have an old version of the code, but there is a non-fully-implemented interface by default. This is in Droid/Controllers/SaveAndLoadController.cs.
-  In order to make this compile the following diff was applied:</p>
+                    In order to make this compile the following diff was applied:</p>
                   <img style="width: 100%" src="static/img/hsConsumer.jpg"/>
                   <p>We just commented out the default NotImplementedException, but it does not matter as even if we set a breakpoint on that line it is never hit anyway.
 
-  This change appears to make the code compile, but it immediately crashes upon launch in the Android simulator. We have targeted Android 4.4 and 6.0.1 using the latest build tools and SDKs available from Microsoft and Google, including all the latest Xamarin updates. We have also cleared out various Xamarin caches. Even getting it to build was triggering weird Visual Studio errors about not being able to find the SDK but the cache clearing fixed that.
+                    This change appears to make the code compile, but it immediately crashes upon launch in the Android simulator. We have targeted Android 4.4 and 6.0.1 using the latest build tools and SDKs available from Microsoft and Google, including all the latest Xamarin updates. We have also cleared out various Xamarin caches. Even getting it to build was triggering weird Visual Studio errors about not being able to find the SDK but the cache clearing fixed that.
 
-  The most irritating sticking point here is that the application does not launch; it just crashes on open. There aren’t any error logs as the app doesn’t load far enough for the debugger to attach. We don’t have Hyper-V enabled on our laptop at the moment (as we were using VMware for some other work and only one hypervisor can be active at once).
-  At the moment we have no recommendation engine to build atop of (as it won’t deploy / run) and no current app to work off of or analyse (so we still don’t really have much idea of how the UX should be).</p>
+                    The most irritating sticking point here is that the application does not launch; it just crashes on open. There aren’t any error logs as the app doesn’t load far enough for the debugger to attach. We don’t have Hyper-V enabled on our laptop at the moment (as we were using VMware for some other work and only one hypervisor can be active at once).
+                    At the moment we have no recommendation engine to build atop of (as it won’t deploy / run) and no current app to work off of or analyse (so we still don’t really have much idea of how the UX should be).</p>
                 </div>
 
               </div>

@@ -18,7 +18,7 @@ h3 {
 h1 {
     text-align: center;
     font-family: "Roboto", "Times New Roman", Times, serif;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     padding-left: 15px;
     padding-right: 15px;
@@ -26,7 +26,7 @@ h1 {
 h2 {
     text-align: center;
     font-family: "Roboto", "Times New Roman", Times, serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     padding-left: 15px;
     padding-right: 15px;
@@ -34,7 +34,7 @@ h2 {
 h3 {
     text-align: left;
     font-family: "Roboto", "Times New Roman", Times, serif;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
     padding-left: 15px;
     padding-right: 15px;
@@ -42,18 +42,19 @@ h3 {
 h4 {
     text-align: left;
     font-family: "Roboto", "Times New Roman", Times, serif;
-    font-size: 10px;
+    font-size: 15px;
     padding-left: 15px;
     padding-right: 15px;
 }
 p {
   font-family: "Roboto", "Times New Roman", Times, serif;
-  font-size: 21px !important;
+  font-size: 20px !important;
   padding-left: 15px;
   padding-right: 15px;
 }
 li {
   font-family: "Roboto", "Times New Roman", Times, serif;
+  font-size: 20px !important;
   padding-left: 15px;
   padding-right: 15px;
 }
