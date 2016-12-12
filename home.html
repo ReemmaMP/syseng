@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="static/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -24,6 +25,20 @@
         </div>
       </nav>
     </header>
+
+    <div class="carousel">
+      <a class="carousel-item" href="#one!"><img width="50%"src="static/img/notification.jpg"/></a>
+      <a class="carousel-item" href="#two!"><img width="50%"src="static/img/generalInterest.jpg"/></a>
+      <a class="carousel-item" href="#three!"><img width="50%"src="static/img/placesOfInterest.jpg"/></a>
+      <a class="carousel-item" href="#four!"><img width="50%"src="static/img/settings.jpg"/></a>
+    </div>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+
+    </script>
       <h1 style="text-align: center;">COMP204P: Systems Engineering Team 7</h1>
       <h2 style="text-align: center;">Project Overview</h2>
       <div class="row" align="center">
