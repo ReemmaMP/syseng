@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="static/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -27,6 +28,57 @@
       </div>
     </header>
     <main>
+      <br>
+      <!-- Modal Trigger -->
+      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">Why Xamarin?</button></center></h4>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Why did we choose Xamarin?</h4>
+          <p>Since the requirement was to create a cross-platform app, we explaored the various framework that were available to us. This included: </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+      </div>
+      <!-- Modal Trigger -->
+      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">Build, setup and configure</button></center></h4>
+
+      <!-- Modal Structure -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>How to build, setup and configure the platform?</h4>
+          <p>Explain</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+      </div>
+      <!-- Modal Trigger -->
+      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">What are the different layers?</button></center></h4>
+
+      <!-- Modal Structure -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <h4>What are the different layers?</h4>
+          <p>Explain the following: The layers identified (e.g., hardware, OS, library/framework,
+          application) and how they communicate with each other.
+           The public APIs that your platform and/or OS make available to
+          allow the application to be written.
+           Identification of what has been adapted from the open source
+          community and what is to be newly developed or configured.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
+        </div>
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+      });
+      </script>
       <h2 style="text-align: center;">Recommendation engine</h2>
       <h3>Problems faced and resolutions</h3>
         <h4>SpotMarketML</h4>
