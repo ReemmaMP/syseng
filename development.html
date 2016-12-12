@@ -41,6 +41,7 @@
               <li>As this is a Microsoft-sponsored project, use of the Microsoft stack is encouraged (and preferred) by our clients.</li>
               <li>Last year's work on this project was done in C# and Xamarin so it made sense to use this technology again in order to be able to re-use any code where possible</li>
               <li>Writing the app in C# allows us to build a rich, native application rather than one that relies on an embedded web browser. This yields a UI that feels more native to the platform, complete with backend code re-use, as opposed to a Cordova app that looks the same on all platforms even if that breaks each given platform's design guidelines.</li>
+              <li>The application uses lots of complex APIs like location tracking which can be more challenging and less reliable in pure JavaScript. Xamarin promises 100% API access from within C#, so our code would even be able to access, for example, Bluetooth Low Energy in the future if it were to be combined with the work of another Spot Markets group.</li>
             </ul>
           </p>
         </div>
@@ -49,20 +50,28 @@
         </div>
       </div>
       <!-- Modal Trigger -->
-      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">Build, setup and configure</button></center></h4>
+      <h4><center><button data-target="modal2" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">Build, setup and configure</button></center></h4>
 
       <!-- Modal Structure -->
       <div id="modal2" class="modal">
         <div class="modal-content">
           <h4>How to build, setup and configure the platform?</h4>
-          <p>Explain</p>
+          <p>
+            <ul>
+              <li>All code we write will be in Microsoft Visual Studio, so this will need to be installed.</li>
+              <li>Code is hosted on Visual Studio Team Services, so obtaining the code, should access be granted, can be done using either Git or the Team Services pane in Visual Studio itself.</li>
+              <li>Once the code is cloned, there will be a single solution (.sln) file which contains all the code for our main application. There may also be other code in the repository if we carry out any further experiments and API tests, but the main repo will be clearly labelled.</li>
+              <li>When opening the project for the first time, all the required NuGet packages will be restored to the project.</li>
+              <li>Choose the platform you want to build for from the dropdown list in Visual Studio. If you are building for iOS you should have a Mac available with Xcode and the Xamarin agent installed to handle builds.</li> 
+            </ul>
+          </p>
         </div>
         <div class="modal-footer">
           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
         </div>
       </div>
       <!-- Modal Trigger -->
-      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">What are the different layers?</button></center></h4>
+      <h4><center><button data-target="modal3" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">What are the different layers?</button></center></h4>
 
       <!-- Modal Structure -->
       <div id="modal3" class="modal">
@@ -74,6 +83,19 @@
           allow the application to be written.
            Identification of what has been adapted from the open source
           community and what is to be newly developed or configured.</p>
+          <p>
+            As we are continuing with and building upon previous work, we were provided with an architectural diagram explaining which components connect to which others. I have annotated this to show which components we should be concerned with in this project.<br>
+            <img src="static/img/SpotMarketsArchitectureDiagram.jpg" class="responsive-img"><br>
+            The following technologies are in use:
+            <ul>
+              <li>Recommendation Engine (not being developed by us, but underpins the machine learning aspects of the project): Azure and AzureML.</li>
+              <li>Database: Azure DocumentDB accessed via the MongoDB API.</li>
+              <li>API: JSON is used to communicate between the client and the server.</li>
+              <li>Flask: The backend server is written in Flask / Python. This is being deployed to a Linux virtual machine hosted on Azure Compute.</li>
+              <li>Bing Maps API: We plan to use Bing Maps to show the user where they are and to overlay the Points of Interest onto a map.</li>
+              <li>OpenWeatherMap API: We are using OpenWeatherMap (as it is free up to one call per second) to source local weather data into the app.</li>
+            </ul>
+          </p>
         </div>
         <div class="modal-footer">
           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close</a>
@@ -350,7 +372,7 @@
             <tr>
               <td>7.</td>
               <td>Weather API</td>
-              <td>Using OpenWeatherMAp to find and use weather API to use in Xamarin.Forms</td>
+              <td>Using OpenWeatherMap to find and use weather API to use in Xamarin.Forms</td>
               <td>Still in process as the build keeps failing and its hard to determine if its because of the Xamarin app itself or the API</td>
               <td>In progress</td>
               <td>Reemma</td>
