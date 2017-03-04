@@ -10,18 +10,82 @@
   </head>
   <body>
     <header>
+      <script type="text/javascript">
+      $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrainWidth: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: false, // Displays dropdown below the button
+        alignment: 'left', // Displays dropdown with edge aligned to the left of button
+        stopPropagation: false // Stops event propagation
+      }
+      );
+      </script>
       <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper">
-            <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="home.html" class="current">home</a></li>
-              <li><a href="requirements.html">requirements</a></li>
-              <li class="active"><a href="development.html">development</a></li>
-              <li><a href="prototypes.html">prototypes</a></li>
-              <li><a href="testing.html">testing</a></li>
-              <li><a href="meta.html">meta</a></li>
-              <li><a href="repo.html">repo</a></li>
+              <li><a href="home.html" class='dropdown-button btn' data-activates='dropdown1'>home</a>
+                <ul id='dropdown1' class='dropdown-content'>
+                  <li><a href="home.html#project">Project Overview</a></li>
+                  <li class="divider"></li>
+                  <li><a href="home.html#meet">Meet the squad</a></li>
+                  <li class="divider"></li>
+                  <li><a href="home.html#roles">Roles</a></li>
+                </ul>
+              </li>
+              <li><a href="requirements.html" class='dropdown-button btn' data-activates='dropdown2'>requirements</a>
+                <ul id='dropdown2' class='dropdown-content'>
+                  <li><a href="requirements.html#final">Final MoSCoW Report</a></li>
+                  <li class="divider"></li>
+                  <li><a href="requirements.html#changes">Changes in MoSCoW Report</a></li>
+                  <li class="divider"></li>
+                  <li><a href="requirements.html#use">Use cases</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="development.html" class='dropdown-button btn' data-activates='dropdown3'>development</a>
+              <ul id='dropdown3' class='dropdown-content'>
+                <li><a href="development.html#why">Why Xamarin?</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#build">Build, Setup and Configure</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#what">What are the different layers?</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#problems">Problems faced and resolutions</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#weekly">Weekly logs</a></li>
+              </ul>
+            </li>
+              <li><a href="prototypes.html" class='dropdown-button btn' data-activates='dropdown4'>prototypes</a>
+                <ul id='dropdown4' class='dropdown-content'>
+                  <li><a href="prototypes.html#initial">Initial app prototypes</a></li>
+                  <li class="divider"></li>
+                  <li><a href="prototypes.html#heu">Heuristic Evaluation</a></li>
+                </ul>
+              </li>
+              <li><a href="testing.html"  class='dropdown-button btn' data-activates='dropdown5'>testing</a>
+                <ul id='dropdown5' class='dropdown-content'>
+                  <li><a href="testing.html#testing">Testing strategies</a></li>
+                  <li class="divider"></li>
+                  <li><a href="testing.html#plans">Plans for term 2</a></li>
+                </ul>
+              </li>
+              <li><a href="meta.html" class='dropdown-button btn' data-activates='dropdown6'>meta</a>
+                <ul id='dropdown6' class='dropdown-content'>
+                  <li><a href="meta.html#bi">Bi-Weekly reports</a></li>
+                  <li class="divider"></li>
+                  <li><a href="meta.html#client">Client meeting minutes</a></li>
+                </ul>
+              </li>
+              <li><a href="repo.html" class='dropdown-button btn' data-activates='dropdown7'>repo</a>
+                <ul id='dropdown7' class='dropdown-content'>
+                  <li><a href="repo.html#vsts">VSTS</a></li>
+                  <li class="divider"></li>
+                  <li><a href="repo.html#github">GitHub</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </nav>
@@ -30,11 +94,11 @@
     <main>
       <br>
       <!-- Modal Trigger -->
-      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; ">Why Xamarin?</button></center></h4>
+      <h4><center><button data-target="modal1" class="btn" style="border-radius: 12px; text-align:center; width: 50%; " >Why Xamarin?</button></center></h4>
 
       <!-- Modal Structure -->
       <div id="modal1" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" id="why">
           <h4>Why did we choose Xamarin?</h4>
           <p>Since the requirement was to create a cross-platform app, we had the choice of using either Xamarin or an HTML-wrapping framework such as Apache Cordova or PhoneGap. There were a few factors that pushed us toward Xamarin:
             <ul>
@@ -54,7 +118,7 @@
 
       <!-- Modal Structure -->
       <div id="modal2" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" id="build">
           <h4>How to build, setup and configure the platform?</h4>
           <p>
             <ul>
@@ -62,7 +126,7 @@
               <li>Code is hosted on Visual Studio Team Services, so obtaining the code, should access be granted, can be done using either Git or the Team Services pane in Visual Studio itself.</li>
               <li>Once the code is cloned, there will be a single solution (.sln) file which contains all the code for our main application. There may also be other code in the repository if we carry out any further experiments and API tests, but the main repo will be clearly labelled.</li>
               <li>When opening the project for the first time, all the required NuGet packages will be restored to the project.</li>
-              <li>Choose the platform you want to build for from the dropdown list in Visual Studio. If you are building for iOS you should have a Mac available with Xcode and the Xamarin agent installed to handle builds.</li> 
+              <li>Choose the platform you want to build for from the dropdown list in Visual Studio. If you are building for iOS you should have a Mac available with Xcode and the Xamarin agent installed to handle builds.</li>
             </ul>
           </p>
         </div>
@@ -75,7 +139,7 @@
 
       <!-- Modal Structure -->
       <div id="modal3" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" id="what">
           <h4>What are the different layers?</h4>
           <p>Explain the following: The layers identified (e.g., hardware, OS, library/framework,
           application) and how they communicate with each other.
@@ -108,7 +172,7 @@
       });
       </script>
       <h2 style="text-align: center;">Recommendation engine</h2>
-      <h3>Problems faced and resolutions</h3>
+      <h3 id="problems">Problems faced and resolutions</h3>
         <h4>SpotMarketML</h4>
         <div class="row">
           <div>
@@ -192,7 +256,7 @@
               </div>
             </div>
           </div>
-      <h3>Weekly log</h3>
+      <h3 id="weekly">Weekly log</h3>
       <table class="highlight">
         <thead>
           <tr>

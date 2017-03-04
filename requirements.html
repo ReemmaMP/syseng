@@ -11,26 +11,90 @@
   </head>
   <body>
     <header>
+      <script type="text/javascript">
+      $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrainWidth: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: false, // Displays dropdown below the button
+        alignment: 'left', // Displays dropdown with edge aligned to the left of button
+        stopPropagation: false // Stops event propagation
+      }
+      );
+      </script>
       <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper">
-            <a href="home.html" class="brand-logo">Spot Markets - Team 3</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="home.html" class="current">home</a></li>
-              <li class="active"><a href="requirements.html">requirements</a></li>
-              <li><a href="development.html">development</a></li>
-              <li><a href="prototypes.html">prototypes</a></li>
-              <li><a href="testing.html">testing</a></li>
-              <li><a href="meta.html">meta</a></li>
-              <li><a href="repo.html">repo</a></li>
+              <li><a href="home.html" class='dropdown-button btn' data-activates='dropdown1'>home</a>
+                <ul id='dropdown1' class='dropdown-content'>
+                  <li><a href="home.html#project">Project Overview</a></li>
+                  <li class="divider"></li>
+                  <li><a href="home.html#meet">Meet the squad</a></li>
+                  <li class="divider"></li>
+                  <li><a href="home.html#roles">Roles</a></li>
+                </ul>
+              </li>
+              <li><a href="requirements.html" class='dropdown-button btn' data-activates='dropdown2'>requirements</a>
+                <ul id='dropdown2' class='dropdown-content'>
+                  <li><a href="requirements.html#final">Final MoSCoW Report</a></li>
+                  <li class="divider"></li>
+                  <li><a href="requirements.html#changes">Changes in MoSCoW Report</a></li>
+                  <li class="divider"></li>
+                  <li><a href="requirements.html#use">Use cases</a></li>
+                </ul>
+              </li>
+              <li><a href="development.html" class='dropdown-button btn' data-activates='dropdown3'>development</a>
+              <ul id='dropdown3' class='dropdown-content'>
+                <li><a href="development.html#why">Why Xamarin?</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#build">Build, Setup and Configure</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#what">What are the different layers?</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#problems">Problems faced and resolutions</a></li>
+                <li class="divider"></li>
+                <li><a href="development.html#weekly">Weekly logs</a></li>
+              </ul>
+            </li>
+              <li><a href="prototypes.html" class='dropdown-button btn' data-activates='dropdown4'>prototypes</a>
+                <ul id='dropdown4' class='dropdown-content'>
+                  <li><a href="prototypes.html#initial">Initial app prototypes</a></li>
+                  <li class="divider"></li>
+                  <li><a href="prototypes.html#heu">Heuristic Evaluation</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="testing.html"  class='dropdown-button btn' data-activates='dropdown5'>testing</a>
+                <ul id='dropdown5' class='dropdown-content'>
+                  <li><a href="testing.html#testing">Testing strategies</a></li>
+                  <li class="divider"></li>
+                  <li><a href="testing.html#plans">Plans for term 2</a></li>
+                </ul>
+              </li>
+              <li><a href="meta.html" class='dropdown-button btn' data-activates='dropdown6'>meta</a>
+                <ul id='dropdown6' class='dropdown-content'>
+                  <li><a href="meta.html#bi">Bi-Weekly reports</a></li>
+                  <li class="divider"></li>
+                  <li><a href="meta.html#client">Client meeting minutes</a></li>
+                </ul>
+              </li>
+              <li><a href="repo.html" class='dropdown-button btn' data-activates='dropdown7'>repo</a>
+                <ul id='dropdown7' class='dropdown-content'>
+                  <li><a href="repo.html#vsts">VSTS</a></li>
+                  <li class="divider"></li>
+                  <li><a href="repo.html#github">GitHub</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </nav>
-    </div>
+      </div>
     </header>
     <main>
       <h2>MoSCoW Report</h2>
-      <h3>Final MoSCoW report</h3>
+      <h3 id="final">Final MoSCoW report</h3>
       <script type="text/javascript">
         $(document).ready(function(){
           $('.collapsible').collapsible({
@@ -117,7 +181,7 @@
         </li>
       </ul>
     </div>
-      <h3>Changes in MoSCoW report</h3>
+      <h3 id="changes">Changes in MoSCoW report</h3>
       <p style="padding-right: 220px;padding-left: 220px;font-size:18px !important;">The initial set of MoSCoW requirements were made based on our understanding of the cleint requests; we then re-consulted our clients to fix upon these requirements. We also took user's perspective into consideration through evaluating the heuristics based on our interaction with the prototype of the app. Through the various iterations, we were able to improve user experience at each stage.<p>
       <div class="row" align="center">
         <div class="card-panel hoverable" style="width:70%;" align="left">
@@ -134,7 +198,7 @@
           </span>
         </div>
       </div>
-      <h2>Use cases</h2>
+      <h2 id="use">Use cases</h2>
       <table class="highlight" width="800" cellpadding="10" cellspacing="5">
         <thread>
         <tr>
