@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <!-- Bootstrap and jQuery -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT"
+            crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Spot Markets Tourist | Template Page</title>
+    </head>
+    <body>
+        <!-- Navigation bar as per website delivery guidelines -->
+        <div class="container" id="navbar-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Spot Markets Tourist</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="requirements.html">Requirements</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="hci.html">HCI</a></li>
+                            <li><a href="design.html">Design</a></li>
+                            <li><a href="testing.html">Testing</a></li>
+                            <li><a href="evaluation.html">Evaluation</a></li>
+                            <li><a href="management.html">Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+          <h2>Use cases</h2>
+          <div class="jumbotron">
+          <table>
+            <thread>
+            <tr>
+              <th width="300"></th>
+              <th scope="col" width="300">1</th>
+              <th scope="col" width="300">2</th>
+              <th scope="col" width="300">3</th>
+              <th scope="col" width="300">4</th>
+            </tr>
+          </thread>
+            <tr>
+              <th scope="row">Use case:</th>
+                <td>Push notifications</td>
+                <td>Geolocation</td>
+                <td>Weather checker</td>
+                <td>Viewing map</td>
+            </tr>
+            <tr>
+                <th scope="row">ID:</th>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+              <th scope="">Brief description</th>
+                <td>The main feature of the application that alerts the user when they are walking past a historical monument.</td>
+                <td>Geolocation feature to detect the location of the user</td>
+                <td>User had the option to check the weather using a button</td>
+                <td>User had the option to view the map using a button</td>
+            </tr>
+            <tr>
+            <th scope="">Primary actors </th>
+              <td>The phone</td>
+              <td>The user</td>
+              <td>Users</td>
+              <td>Users</td>
+            </tr>
+            <tr>
+              <th scope="">Secondary actors</th>
+                <td>The application</td>
+                <td>The application</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+              <th scope="">Preconditions (the system state before the use case can begin)</th>
+                <td>
+                  <ul>
+                    <li>Connected to Wi-Fi or active network</li>
+                    <li>Geolocation can be tracked and pinpointed to a specific point</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>The user need to have GPS enabled</li>
+                    <li>Must be connected to internet/wifi on their mobile device</li>
+                  </ul>
+                </td>
+                <td>Must be connected to internet/wifi on their mobile device</td>
+                <td>
+                  <ul>
+                    <li>Must be connected to internet/wifi on their mobile device.</li>
+                    <li>Map downloaded from google.</li>
+                    <li>User location detected.</li>
+                  </ul>
+                  </td>
+            </tr>
+            <tr>
+              <th scope="">Main flow (the actual steps of the use case)</th>
+                <td>
+                  <ul>
+                    <li>Location noted</li>
+                    <li>Retrieve information about the surroundings from the database</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>User location detected</li>
+                    <li>This information is used to retrieve information from the database.</li>
+                    <li>The user location is used as a filter criteria.</li>
+                    <li>The app will show all modules that satisfy the filter.</li>
+                    <li>The user can scroll through list of available options (of places to visit).</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Use case initiated when the user clicks the 'check weather' button.</li>
+                    <li>API call requested and returns with realtime weather data.</li>
+                    <li>Data displayed to user.</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Use case initiated when the user clicks the 'View map' button.</li>
+                    <li>API call requested and returns with map based on location.</li>
+                    <li>Place marker on map displayed.</li>
+                    <li>The user can have street view.</li>
+                    <li>The user can view direction by launching the google map.</li>
+                  </ul>
+                  </td>
+            </tr>
+            <tr>
+              <th scope="">Postconditions (the system state when the use case is finished)</th>
+                <td>Notification pushed to the user</td>
+                <td>The modules are displays as per the parameters of the filter</td>
+                <td>Shows weather for the day</td>
+                <td>Shows map based on the location</td>
+            </tr>
+            <tr>
+              <th scope="">Alternative flows</th>
+                <td>
+                  <ul>
+                    <li>Calendar indicates that the user is currently busy so the notification is not sent</li>
+                    <li>Wifi connection lost so notification is not pushed- hopefully deleted </li>
+                    <li>Frequency is set to a minimum so the notification is deleted if a certain number of notifications have already been pushed</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Location not found</li>
+                    <li>No places to visit nearby</li>
+                    <li>Widen the radius of search until app is able to show modules</li>
+                  </ul>
+                </td>
+                <td>"Unable to get details"</td>
+                <td>-</td>
+            </tr>
+            <tr>
+              <th scope="">Trigger</th>
+                <td>When you walk past a building/approaching a building, details of your location is constantly being send to the database. When you receive a response from the database, then the push notification is triggered</td>
+                <td>Connected to phone network</td>
+                <td>Button click</td>
+                <td>Button click</td>
+            </tr>
+            <tr>
+              <th scope="">Error flows</th>
+                <td>
+                  <ul>
+                    <li>Lose connection</li>
+                    <li>When a notification is pushed but the user is too far from the place of interest</li>
+                  </ul>
+                </td>
+                <td>Location not found</td>
+                <td>Trouble connecting to internet</td>
+                <td>
+                  <ul>
+                  <li>Lose connection</li>
+                  <li>Location not found</li>
+                  </ul>
+                  </td>
+            </tr>
+          </table>
+        </div>
+          <h2>Heuristic Evaluation</h2>
+
+            <p>We carried out heuristic evaluations to see if our prototype fit a collection of standardised heuristics that have been gathered*. We analysed each page of the app against the set heuristics. Our findings were:
+              <br>
+              <div class="jumbotron">
+              <br><b>Match between system and the real world*</b> - we have successfully made it accessible to our users by using language over system symbols or other alternatives. At the moment however, we realise that it may only be accessible to some since we have only provided the app in English and it doesn’t support other languages.
+              <br>
+              <br><b>Aesthetic and minimalist design*</b> - We have minimized the amount of text in the app by introducing popular symbols in their place accompanied by words. Our color scheme also matches the Microsoft colour palette so that it makes it easier for the user to recognise the product.
+              <br>
+              <br><b>Recognition rather than recall*</b> - To prevent the user getting lost in the app pages, we have minimized the number of app pages so that they don’t lose track of where they are. They can also go back to previous page and home page from any point.
+            </p>
+          </div>
+        </div>
+    </body>
+</html>
