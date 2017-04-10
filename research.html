@@ -49,7 +49,7 @@
         </div>
 
         <div class="container">
-          <h2>Why did we choose Xamarin?</h4>
+          <h2>Why did we choose Xamarin?</h2>
           <div class="jumbotron">
             <p>Since the requirement was to create a cross-platform app, we had the choice of using either Xamarin or an HTML-wrapping framework such as Apache Cordova or PhoneGap. There were a few factors that pushed us toward Xamarin:
               <ul>
@@ -61,7 +61,7 @@
             </p>
           </div>
 
-          <h2>How to build, setup and configure the platform?</h4>
+          <h2>How to build, setup and configure the platform?</h2>
           <div class="jumbotron">
             <p>
               <ul>
@@ -73,6 +73,30 @@
               </ul>
             </p>
           </div>
+
+        <h2>What are the different layers?</h2>
+        <div class="jumbotron">
+          <p>Explain the following: The layers identified (e.g., hardware, OS, library/framework,
+          application) and how they communicate with each other.
+           The public APIs that your platform and/or OS make available to
+          allow the application to be written.
+           Identification of what has been adapted from the open source
+          community and what is to be newly developed or configured.</p>
+          <p>
+            As we are continuing with and building upon previous work, we were provided with an architectural diagram explaining which components connect to which others. I have annotated this to show which components we should be concerned with in this project.<br>
+            <img src="original/static/img/SpotMarketsArchitectureDiagram.jpg"><br>
+            The following technologies are in use:
+            <ul>
+              <li>Recommendation Engine (not being developed by us, but underpins the machine learning aspects of the project): Azure and AzureML.</li>
+              <li>Database: Azure DocumentDB accessed via the MongoDB API.</li>
+              <li>API: JSON is used to communicate between the client and the server.</li>
+              <li>Flask: The backend server is written in Flask / Python. This is being deployed to a Linux virtual machine hosted on Azure Compute.</li>
+              <li>Bing Maps API: We plan to use Bing Maps to show the user where they are and to overlay the Points of Interest onto a map.</li>
+              <li>OpenWeatherMap API: We are using OpenWeatherMap (as it is free up to one call per second) to source local weather data into the app.</li>
+            </ul>
+          </p>
         </div>
+      </div>
+    </div>
     </body>
 </html>
