@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <!-- Bootstrap and jQuery -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT"
+            crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Spot Markets Tourist | Template Page</title>
+    </head>
+    <body>
+        <!-- Navigation bar as per website delivery guidelines -->
+        <div class="container" id="navbar-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Spot Markets Tourist</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="requirements.html">Requirements</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="hci.html">HCI</a></li>
+                            <li><a href="design.html">Design</a></li>
+                            <li><a href="testing.html">Testing</a></li>
+                            <li><a href="evaluation.html">Evaluation</a></li>
+                            <li class="active"><a href="management.html">Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+          <h3>Experiment Log</h3>
+          <div class="jumbotron">
+            <table>
+              <thead>
+                <tr>
+                    <th data-field="no">Experiment no.</th>
+                    <th data-field="title">Experiment title </th>
+                    <th data-field="details">Details</th>
+                    <th data-field="results">Results</th>
+                    <th data-field="outcome">Success and Failure</th>
+                    <th data-field="who">Done by</th>
+                    <th data-field="date">Date</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Setting up environment</td>
+                  <td>Had to install Visual Studio and custom-install the cross-platform mobile development features, including android emulators.</td>
+                  <td>Consumed a lot of space on my laptop and runs fairly slowly</td>
+                  <td>Sucessfully set up the environment needed</td>
+                  <td>Reemma, Chris, Ken</td>
+                  <td>4/10/16</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Created prototypes</td>
+                  <td>Created prototypes of what the app would look like (full user interface) using a prototyping software. </td>
+                  <td>The prototype shows what features the app would have and what pages we need and what the transition between the pages would look like.</td>
+                  <td>Successful prototype up on the website</td>
+                  <td>Reemma</td>
+                  <td>20/11/16</td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>Experiment with Xamarin.Forms layouts</td>
+                  <td>The layouts are presented within Hamburger Menu navigation UI built from a MasterDetailPage in Xamarin.Forms.</td>
+                  <td>Knowing the Xamarin better through this experiment. The Xamarin.Android app contains custom styling elements to provide a UI based on Material Design.I have only created three UI layouts by now, which are Login Page
+                    Button Grid, Grid Layout. And I will add more page layouts. </td>
+                  <td>Work in progress</td>
+                  <td>Ken</td>
+                  <td>27/11/16</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>Deploying database</td>
+                  <td>Deploying the MongoDB database provided by Microsoft to Azure</td>
+                  <td>Work in progress. When we first attempted this the Python would not run as we had been given an old version of the code that does not work. After consulting Microsoft we now have a better idea of how to do this.</td>
+                  <td>Work in Progress</td>
+                  <td>Chris</td>
+                  <td>25/11/16</td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>Running basic application on emulator </td>
+                  <td>Running basic application on emulator to check that the code and all extensions work</td>
+                  <td>1>Exception in thread "main"
+                      1>java.lang.UnsupportedClassVersionError: com/android/dx/command/Main  :  Unsupported major.minor version 52.0
+                      1>Build FAILED.
+                      1>
+                      ========== Deploy: 0 succeeded, 1 failed, 0 skipped ========== </td>
+                  <td>Work in progress</td>
+                  <td>Reemma</td>
+                  <td>1/12/16</td>
+                </tr>
+                <tr>
+                  <td>6.</td>
+                  <td>Heuristic evaluation</td>
+                  <td>Carried out heuristic evaluations on the prototype to see if it fit a collection of standardised heuristics and then analysed each page of the app against it. </td>
+                  <td>Successfully recognised modifications that can be made to the app to make the user interface more friendly for users</td>
+                  <td>Successful</td>
+                  <td>Reemma</td>
+                  <td>5/12/16</td>
+                </tr>
+
+                <tr>
+                  <td>7.</td>
+                  <td>Weather API</td>
+                  <td>Using OpenWeatherMap to find and use weather API to use in Xamarin.Forms</td>
+                  <td>Still in process as the build keeps failing and its hard to determine if its because of the Xamarin app itself or the API</td>
+                  <td>In progress</td>
+                  <td>Reemma</td>
+                  <td>8/12/16</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </body>
+</html>

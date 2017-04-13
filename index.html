@@ -1,10 +1,90 @@
 <html>
     <head>
-        <meta http-equiv="refresh" content="0; url=home.html">
+        <!-- Bootstrap and jQuery -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT"
+            crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Spot Markets Tourist | Template Page</title>
     </head>
     <body>
-        <script>
-            window.location = "home.html";
-        </script>
+        <!-- Navigation bar as per website delivery guidelines -->
+        <div class="container" id="navbar-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Spot Markets Tourist</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="requirements.html">Requirements</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="hci.html">HCI</a></li>
+                            <li><a href="design.html">Design</a></li>
+                            <li><a href="testing.html">Testing</a></li>
+                            <li><a href="evaluation.html">Evaluation</a></li>
+                            <li><a href="management.html">Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Spot Markets (Tourist App)</h1>
+                <h2>Systems Engineering 2016/17 Group 7</h2>
+                <hr>
+                <p>
+                    Spot Markets is a collaborative project between Microsoft, Kent County Council and UCL. It promotes business in small local communities, such as in Kent. By applying Machine Learning to social media and purchase data, the project is able to make purchase recommendations to users via a Spot Markets app. Our project is a tourism extension for Spot Markets to allow users to see local Points of Interest, as well as the weather where they are.
+                </p>
+                <p>
+                    Our app is cross-platform for iOS and Android and is written using C# and Xamarin. The backend is a Django and PostgreSQL web application and API hosted on Microsoft Azure. The recommendation engine it is built for is written in Python, connected to Azure Machine Learning and also hosted on Azure.
+                </p>
+            </div>
+
+            <h3>Feature Overview</h3>
+            <div class="well">
+                The requirements given to us by the clients include both features we should include along with methodologies and technologies they prefer. The key features are listed here, and full details are on the <a href="requirements.html">requirements</a> page.
+                <ul>
+                    <li>
+                        In-app map to show the user where they are and what landmarks are around
+                    </li>
+                    <li>
+                        Integration with a backend API, and preferably the Spot Markets Recommendation Engine
+                    </li>
+                    <li>
+                        Database of landmarks &amp; attractions built into the backend
+                    </li>
+                    <li>
+                        Push notification support
+                    </li>
+                    <li>
+                        Web interface to allow the council to add and remove attractions
+                    </li>
+                    <li>
+                        Weather checking functionality
+                    </li>
+                </ul>
+            </div>
+        </div>
     </body>
-</html>    
+</html>

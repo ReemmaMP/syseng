@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <!-- Bootstrap and jQuery -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT"
+            crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Spot Markets Tourist | Template Page</title>
+    </head>
+    <body>
+        <!-- Navigation bar as per website delivery guidelines -->
+        <div class="container" id="navbar-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Spot Markets Tourist</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="requirements.html">Requirements</a></li>
+                            <li class="active"><a href="research.html">Research</a></li>
+                            <li><a href="hci.html">HCI</a></li>
+                            <li><a href="design.html">Design</a></li>
+                            <li><a href="testing.html">Testing</a></li>
+                            <li><a href="evaluation.html">Evaluation</a></li>
+                            <li><a href="management.html">Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+          <h2>Why did we choose Xamarin?</h2>
+          <div class="jumbotron">
+            <p>Since the requirement was to create a cross-platform app, we had the choice of using either Xamarin or an HTML-wrapping framework such as Apache Cordova or PhoneGap. There were a few factors that pushed us toward Xamarin:
+              <ul>
+                <li>As this is a Microsoft-sponsored project, use of the Microsoft stack is encouraged (and preferred) by our clients.</li>
+                <li>Last year's work on this project was done in C# and Xamarin so it made sense to use this technology again in order to be able to re-use any code where possible</li>
+                <li>Writing the app in C# allows us to build a rich, native application rather than one that relies on an embedded web browser. This yields a UI that feels more native to the platform, complete with backend code re-use, as opposed to a Cordova app that looks the same on all platforms even if that breaks each given platform's design guidelines.</li>
+                <li>The application uses lots of complex APIs like location tracking which can be more challenging and less reliable in pure JavaScript. Xamarin promises 100% API access from within C#, so our code would even be able to access, for example, Bluetooth Low Energy in the future if it were to be combined with the work of another Spot Markets group.</li>
+              </ul>
+            </p>
+          </div>
+
+          <h2>How to build, setup and configure the platform?</h2>
+          <div class="jumbotron">
+            <p>
+              <ul>
+                <li>All code we write will be in Microsoft Visual Studio, so this will need to be installed.</li>
+                <li>Code is hosted on Visual Studio Team Services, so obtaining the code, should access be granted, can be done using either Git or the Team Services pane in Visual Studio itself.</li>
+                <li>Once the code is cloned, there will be a single solution (.sln) file which contains all the code for our main application. There may also be other code in the repository if we carry out any further experiments and API tests, but the main repo will be clearly labelled.</li>
+                <li>When opening the project for the first time, all the required NuGet packages will be restored to the project.</li>
+                <li>Choose the platform you want to build for from the dropdown list in Visual Studio. If you are building for iOS you should have a Mac available with Xcode and the Xamarin agent installed to handle builds.</li>
+              </ul>
+            </p>
+          </div>
+
+        <h2>What are the different layers?</h2>
+        <div class="jumbotron">
+          <p>Explain the following: The layers identified (e.g., hardware, OS, library/framework,
+          application) and how they communicate with each other.
+           The public APIs that your platform and/or OS make available to
+          allow the application to be written.
+           Identification of what has been adapted from the open source
+          community and what is to be newly developed or configured.</p>
+          <p>
+            As we are continuing with and building upon previous work, we were provided with an architectural diagram explaining which components connect to which others. I have annotated this to show which components we should be concerned with in this project.<br>
+            <img class="img img-responsive" src="original/static/img/SpotMarketsArchitectureDiagram.jpg"><br>
+            The following technologies are in use:
+            <ul>
+              <li>Recommendation Engine (not being developed by us, but underpins the machine learning aspects of the project): Azure and AzureML.</li>
+              <li>Database: Azure DocumentDB accessed via the MongoDB API.</li>
+              <li>API: JSON is used to communicate between the client and the server.</li>
+              <li>Flask: The backend server is written in Flask / Python. This is being deployed to a Linux virtual machine hosted on Azure Compute.</li>
+              <li>Bing Maps API: We plan to use Bing Maps to show the user where they are and to overlay the Points of Interest onto a map.</li>
+              <li>OpenWeatherMap API: We are using OpenWeatherMap (as it is free up to one call per second) to source local weather data into the app.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>

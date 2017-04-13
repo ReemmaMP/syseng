@@ -1,157 +1,142 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>testing</title>
-    <link rel="stylesheet" href="static/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header>
-      <script type="text/javascript">
-      $('.dropdown-button').dropdown({
-        inDuration: 300,
-        outDuration: 225,
-        constrainWidth: false, // Does not change width of dropdown to that of the activator
-        hover: true, // Activate on hover
-        gutter: 0, // Spacing from edge
-        belowOrigin: false, // Displays dropdown below the button
-        alignment: 'left', // Displays dropdown with edge aligned to the left of button
-        stopPropagation: false // Stops event propagation
-      }
-      );
-      </script>
-      <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="home.html" class='dropdown-button btn' data-activates='dropdown1'>home</a>
-                <ul id='dropdown1' class='dropdown-content'>
-                  <li><a href="home.html#project">Project Overview</a></li>
-                  <li class="divider"></li>
-                  <li><a href="home.html#meet">Meet the squad</a></li>
-                  <li class="divider"></li>
-                  <li><a href="home.html#roles">Roles</a></li>
-                </ul>
-              </li>
-              <li><a href="requirements.html" class='dropdown-button btn' data-activates='dropdown2'>requirements</a>
-                <ul id='dropdown2' class='dropdown-content'>
-                  <li><a href="requirements.html#final">Final MoSCoW Report</a></li>
-                  <li class="divider"></li>
-                  <li><a href="requirements.html#changes">Changes in MoSCoW Report</a></li>
-                  <li class="divider"></li>
-                  <li><a href="requirements.html#use">Use cases</a></li>
-                </ul>
-              </li>
-              <li><a href="development.html" class='dropdown-button btn' data-activates='dropdown3'>development</a>
-              <ul id='dropdown3' class='dropdown-content'>
-                <li><a href="development.html#why">Why Xamarin?</a></li>
-                <li class="divider"></li>
-                <li><a href="development.html#build">Build, Setup and Configure</a></li>
-                <li class="divider"></li>
-                <li><a href="development.html#what">What are the different layers?</a></li>
-                <li class="divider"></li>
-                <li><a href="development.html#problems">Problems faced and resolutions</a></li>
-                <li class="divider"></li>
-                <li><a href="development.html#weekly">Weekly logs</a></li>
-              </ul>
-            </li>
-              <li><a href="prototypes.html" class='dropdown-button btn' data-activates='dropdown4'>prototypes</a>
-                <ul id='dropdown4' class='dropdown-content'>
-                  <li><a href="prototypes.html#initial">Initial app prototypes</a></li>
-                  <li class="divider"></li>
-                  <li><a href="prototypes.html#heu">Heuristic Evaluation</a></li>
-                </ul>
-              </li>
-              <li><a href="testing.html"  class='dropdown-button btn' data-activates='dropdown5'>testing</a>
-                <ul id='dropdown5' class='dropdown-content'>
-                  <li><a href="testing.html#testing">Testing strategies</a></li>
-                  <li class="divider"></li>
-                  <li><a href="testing.html#plans">Plans for term 2</a></li>
-                </ul>
-              </li>
-              <li><a href="meta.html" class='dropdown-button btn' data-activates='dropdown6'>meta</a>
-                <ul id='dropdown6' class='dropdown-content'>
-                  <li><a href="meta.html#bi">Bi-Weekly reports</a></li>
-                  <li class="divider"></li>
-                  <li><a href="meta.html#client">Client meeting minutes</a></li>
-                </ul>
-              </li>
-              <li><a href="repo.html" class='dropdown-button btn' data-activates='dropdown7'>repo</a>
-                <ul id='dropdown7' class='dropdown-content'>
-                  <li><a href="repo.html#vsts">VSTS</a></li>
-                  <li class="divider"></li>
-                  <li><a href="repo.html#github">GitHub</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-      <h2 id="testing">Testing strategies</h2>
-      <div class="row" align="center">
-        <div class="card-panel hoverable" style="width:70%;">
-          <span class="black-text" align="left" style="text-align: left !important;">
-            <p>
-              Along with researching about how to build the app, we looked into Unit testing as well as this is essential to ensuring that our code works in every possible scenario that can be generated. According to this article*, our unit test should be equipped to do the following:
-              <ul  style="padding-left: 40px;">
-                <li>- Set the conditions (pre-conditions)</li>
-                <li>- Cause the trigger</li>
-                <li>- Check for the expected results</li>
-              </ul>
-            </p>
-            <p>Due to the time limit on this project, we may not be able to explore all the different options for testing. However, a few may be more relevant and good to have implemented. We will be focusing on testing for most commonly occurring issues. For example, we may find that boundary conditions* are a prime source of the bugs found in our application code. Similar to the method shown, we could implement a unit test to catch a StackOverflowException, and if it’s not caught, then the unit test would fail.</p>
-            <p>In addition to this, we looked at Visual Studio specific guides on how to set up Unit Tests. As we were still at research stage, we only practised unit testing on smaller, dummy apps we made. To make it work on our Xamarin application, we would need to do the following**:</p>
-            <ul style="padding-left: 40px;">
-              <li>- Create a test project</li>
-              <li>- Create a test methods within the projects</li>
-              <li>- Write the testsSet timeout on each method using a unit test framework. We found out that Visual Studio IntelliSense will be a useful guide in doing this </li>
-              <li>- Set timeout on each method</li>
-              <li>- Practise running the tests in a test explorer and check for passes and fails and outstanding tests</li>
-            </ul>
-          </span>
+    <head>
+        <!-- Bootstrap and jQuery -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT"
+            crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Spot Markets Tourist | Template Page</title>
+    </head>
+    <body>
+        <!-- Navigation bar as per website delivery guidelines -->
+        <div class="container" id="navbar-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Spot Markets Tourist</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="requirements.html">Requirements</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="hci.html">HCI</a></li>
+                            <li><a href="design.html">Design</a></li>
+                            <li class="active"><a href="testing.html">Testing</a></li>
+                            <li><a href="evaluation.html">Evaluation</a></li>
+                            <li><a href="management.html">Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </div>
-      <h2 id="plans">Plans for term 2</h2>
-      <div class="row" align="center">
-        <div class="card-panel hoverable" style="width:87%;">
-          <span class="black-text" align="left" style="text-align: left !important;">
-            <span class="black-text" align="left" style="text-align: left !important;">
-              <h4>User Testing</h4>
-              <p> We will keep on conducting some user testing based on the strategies above.</p>
-              <h4>Plugin Development</h4>
-              <p>We will be developing the plugins needed to fulfill the use cases/requirements of the application.</p>
-              <h4>Production</h4>
-              <p>We will be putting the experiments together and making the real production.</p>
-              <h4>Documentation</h4>
-              <p>We're planning on documenting our processes, toolchains and the application's source code so that the application is easy to maintain.</p>
-            </span>
-          </span>
-        </div>
-    </div>
-      <footer class="page-footer" >
-      <div class="container">
-        <div class="row">
-          <div>
-            <h5 class="white-text">References</h5>
-            <ul style="font-size:15px">
-              <li><a class="grey-text text-lighten-3" href="#!">*Lorenz, Jesse. "How To Write Good Unit Tests - Developer.Force.Com". Developer.salesforce.com. N.p., 2016. Web. 30 Nov. 2016.</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">**"Unit Test Basics". Msdn.microsoft.com. N.p., 2016. Web. 30 Nov. 2016.</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
+
         <div class="container">
-        © 2016 Copyrighted
+          <h2 id="problems">Problems faced and resolutions</h2>
+            <h3>SpotMarketML</h3>
+            <div class="well">
+            <div class="row">
+              <div>
+                <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title">SpotMarketML error 1</span>
+                    <br>
+                    <p>It appears as though there is some sort of Flask project in this repository. Opening the Visual Studio solution doesn’t appear to load all the files (is the project broken?)</p>
+                    <p>Update on 12th December: we have since had a meeting with Bianca and she updated the code in the respository to a newer version. She informed us that the sln file can be used to set up the environment and that we should call the rest of the Python code directly. However, this has not worked yet, and both parties are currently working to try to get the right requirements installed so that the code will run.</p>
+                    <img style="width: 100%"  src="original/static/img/SpotMarketML.jpg"/>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title">SpotMarketML error 2</span>
+                    <br>
+                    <p>We have been following the Matchbox Recommender deployment guide. Unfortunately, we were stuck on this bit:
+                    <img style="width: 100%"  src="original/static/img/flask.jpg"></p>
+                    <p>Update on 12th December: we have been informed by Bianca that we must deploy the database first, and that we may not even need this part of the code to deploy to build our section of the app. Even though the code seems broken, we may be able to ignore it and move on with the rest of the project.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title">SpotMarketML error 3</span>
+                    <br>
+                    <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.</p>
+                    <img style="width: 100%"  src="original/static/img/errors.jpg">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                    <span class="card-title">SpotMarketML error 4</span>
+                    <br>
+                    <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.
+                    <img style="width: 100%"  src="original/static/img/module.jpg">
+                    </p>
+                    <p>
+                      Update on 12th December: As mentioned in in error #3, we may be able to work round this with Bianca's help, but it is still a deployment work in progress.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+            <h3>hsConsumer</h3>
+            <div class="well">
+              <div class="row">
+                <div>
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">hsConsumer error</span>
+                      <br>
+                      <p>This project out the box from VSTS will not compile under VS2015. I’m not sure if this is because we have an old version of the code, but there is a non-fully-implemented interface by default. This is in Droid/Controllers/SaveAndLoadController.cs.
+                        In order to make this compile the following diff was applied:</p>
+                      <img style="width: 100%"  src="original/static/img/hsConsumer.jpg"/>
+                      <p>We just commented out the default NotImplementedException, but it does not matter as even if we set a breakpoint on that line it is never hit anyway.
+
+                        This change appears to make the code compile, but it immediately crashes upon launch in the Android simulator. We have targeted Android 4.4 and 6.0.1 using the latest build tools and SDKs available from Microsoft and Google, including all the latest Xamarin updates. We have also cleared out various Xamarin caches. Even getting it to build was triggering weird Visual Studio errors about not being able to find the SDK but the cache clearing fixed that.
+
+                        The most irritating sticking point here is that the application does not launch; it just crashes on open. There aren’t any error logs as the app doesn’t load far enough for the debugger to attach. We don’t have Hyper-V enabled on our laptop at the moment (as we were using VMware for some other work and only one hypervisor can be active at once).
+                        At the moment we have no recommendation engine to build atop of (as it won’t deploy / run) and no current app to work off of or analyse (so we still don’t really have much idea of how the UX should be).</p>
+                        <p>
+                          Update on 12th December: we have been told that the Android code should never have been included in the repository we were given, and instead we should just build a fresh app from scratch. Also, if we set up Xamarin on a Mac, we should be able to build the iOS app. We are yet to try this as we are all using Windows in the group.
+                        </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
-      </div>
-      </footer>
-    <main>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    </main>
-  </body>
+    </body>
 </html>
