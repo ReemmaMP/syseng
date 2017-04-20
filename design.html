@@ -49,6 +49,7 @@
         </div>
 
         <div class="container">
+
           <h2 style="" id="initial">Initial app prototypes</h2>
           <div class="row">
             <div align="center">
@@ -62,13 +63,18 @@
           </div>
 
         <h2 align="left">Design Patterns</h2>
+        <div class="well">
         <ul align="left">
-          <li>Model View Controller</li>
-          <li>2</li>
+          <br>
+          <li>Model View Controller- Our Django webapp for Kent County Council is built following the Model View Controller architectural pattern. The Model part corresponds to our permanent store for all the data we collect through our webapp, which is the access to our Postgresql database. The View is in charge of the User Interface logic of the application as it generates the HTML code and produces its output which is what the user is able to see. The Controller is the interface between the Model and the View and in our webapp, it is responsible for updating the Model based on user input in the View. [1] It is hosted in an Azure instance. </li>
+          <br>
+          <li>Singleton Pattern- Singleton Design Pattern is one of the Gang of Four design patterns we have used to only a single instance of the singleton class is created. One of the ways in which we were able to implement it in C# is by creating a static variable which then holds a reference single instance that has been created [2].</li>
+          <br>
           <li>3</li>
-          <li>4</li>
-          <li>5</li>
         </ul>
+        </div>
+        <p align="left">[1] Hopkins, Callum. "PHP Master | The MVC Pattern And PHP, Part 1". SitePoint. N.p., 2017. Web. 3 Apr. 2017.</p>
+        <p align="left">[2] "C# In Depth: Implementing The Singleton Pattern". Csharpindepth.com. N.p., 2017. Web. 20 Apr. 2017.</p>
         </div>
     </body>
 </html>
