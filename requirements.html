@@ -17,7 +17,7 @@
 
         <link rel="stylesheet" href="css/styles.css">
 
-        <title>Spot Markets Tourist | Template Page</title>
+        <title>Spot Markets Tourist | Requirements</title>
     </head>
     <body>
         <!-- Navigation bar as per website delivery guidelines -->
@@ -72,16 +72,16 @@
                     <h3>Must haves</h3>
                     <p>
                         (These are the absolute minimum requirements that we will strive to meet during this project. Fulfilling each of these requirements will constitute success for the project.)<br><br>
-                        <strong>Cross-Platform app – it must work on both Android and iOS</strong><br>
-                        Android and iOS are the two major target platforms for this project as they have the greatest market share. In order to make this requirement easier we are allowed to have shared code between the two deployments (e.g. we have to create one app that works on both platforms as opposed to two separate apps.)<br>
+                        <strong>Cross-Platform app: it must work on both Android and iOS</strong><br>
+                        Android and iOS are the two major target platforms for this project as they have the greatest market share. In order to make this requirement easier we are allowed to have shared code between the two deployments (e.g. we should create one app that works on both platforms as opposed to two separate apps.)<br>
                         <strong>C# Xamarin code-base</strong><br>
-                        The clients want us to build the application in Xamarin so that we can write the entire app in C# and also export it for multiple platforms easily.<br>
-                        <strong>Geolocation features to locate the user, possibly using Bing Maps API</strong><br>
-                        A strong part of this application is geolocation, and where possible this should be done with Microsoft APIs. One such API that might be of assistance to us is th Bing Maps one as we can plot the user's location and overlay nearby tourist attractions.<br>
+                        The clients want us to build the application in Xamarin so that we can write the entire app in C# and also export it for multiple platforms easily. This is also because the project is sponsored by Microsoft who own Xamarin, and therefore would like to see it in lieu of any competitors' platforms.<br>
+                        <strong>Geolocation features to locate the user</strong><br>
+                        A strong part of this application is geolocation, and where possible this should be done with Microsoft APIs. One such API that might be of assistance to us is th Bing Maps one as we can plot the user's location and overlay nearby tourist attractions. However, due to the Bing Maps API being best suited to corporate customers, the client is happy with us using the Google Maps API if we choose to do so.<br>
                         <strong>Integration with the Recommendation Engine/API</strong><br>
-                        As there is already a machine learning backend and API to expose the data written, we should use this API to supply user data to the app. This does mean that we ourselves do not have to derive any data recommendations; we just need to expose the machine learning algorithms that have already been written.<br>
-                        <strong>Database of landmarks / places of attractions</strong><br>
-                        We should use Azure Table Storage to keep track of the landmarks and attractions that will be available through the app.
+                        As there is already a machine learning backend and API to expose the data written, we should use this API to supply user data to the app. This does mean that we ourselves do not have to derive any data recommendations; we just need to expose the machine learning algorithms that have already been written. Due to the complexity of this recommendations API it is acceptable to not use it if necessary, as the main focus of this project is the tourism functionality.<br>
+                        <strong>Database of Landmarks / Points of Interest</strong><br>
+                        We should use Microsoft Azure to keep track of the landmarks and attractions that will be available through the app.
                     </p>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="shouldhaves">
@@ -92,10 +92,10 @@
                         A lot of the mapping interface could look very messy, so we will next look into creating a slick User Interface that is both function and attractive.<br>
                         <strong>Ability to Push Notifications</strong><br>
                         The inital application will show landmarks that are around and interesting based on the user. The next stage would be to push location-specific, timely alerts to the user. This has to be done carefully to ensure that the notifications do not spam the user, do not come up too late and do not drain the user's battery at an unwieldly speed. Even though Notifications themselves use very little battery, constant GPS tracking does use a lot.<br>
-                        <strong>An interface for Kent County council to add/approve places of interest</strong><br>
+                        <strong>An interface for Kent County Council to add/approve Points of Interest</strong><br>
                         Instead of just pulling information in from Bing POI, it would be useful for the Council to be able to manually add landmarks to the app without waiting for the data to reach Bing's POI database. This would also allow them to add their own custom metadata and write-ups.<br>
-                        <strong>A weather Checking Function</strong><br>
-                        By using a Microsoft Weather API we could show the user the weather forecase for the council and surrounding areas.
+                        <strong>A Weather Checking Function</strong><br>
+                        By using a Weather API we could show the user the weather forecast for each Point of Interest to complete the &quot;tourist experience&quot;.
                     </p>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="couldhaves">
@@ -104,8 +104,8 @@
                         (If we have spare time on the project once we have implemented all Must Haves and most Should Haves, we will try to implement these features)<br><br>
                         <strong>Support for Wearables</strong><br>
                         Microsoft and Kent Council are interested in seeing if this concept could be brought to devices such as the Apple Watch and Android Wear watches. Even though support for these devices comes in out-of-box SDKs, we would need to write an extra interface for each device type, so this is considered a low priority due to time constraints.<br>
-                        <strong>Battery Optimization</strong><br>
-                        Much of the real-time tracking of the user required for location-based push notifications could, if implemented naively, cause rampant battery drain (similar to Pokémon Go). In this part of the project we would consider how to deal with these issues using intelligent algorithms and techniques such as geofencing.<br>
+                        <strong>Battery Optimisation</strong><br>
+                        Much of the real-time tracking of the user required for location-based push notifications could, if implemented naively, cause rampant battery drain (similar to Pok&eacute;mon Go). In this part of the project we would consider how to deal with these issues using intelligent algorithms and techniques such as geofencing.<br>
                         <strong>Be an extension of the existing project</strong><br>
                         Due to the fact that we have had many issues compiling and using the hsConsumer application which was built last year (e.g. the Spot Markets shopping recommendation application), we have pushed down the priority of reusing and/or extending this code as it would not be testable. However, should we find or be given solutions to these issues, we will reconsider writing all our code as an extension to what already exists.<br>
                         <strong>A method of tuning the frequency of the push notifications received by the user</strong><br>
@@ -121,13 +121,13 @@
                 <div role="tabpanel" class="tab-pane fade" id="willnothaves">
                     <h3>Won't (Necessarily) Have</h3>
                     <p>
-                        (These features were either discussed with the clients or discussed internally as a group but, due to scope and time restrictions, they are not expectated to feature in our project's submission)<br><br>
+                        (These features were either discussed with the clients or discussed internally as a group but, due to scope and time restrictions, they are not expected to feature in our project's submission)<br><br>
                         <strong>Bot integration to make it more interactive</strong><br>
                         We debated the idea of having a bot inside the app to have a conversation with the user about what kinds of attractions they would want to see, but we considered it too far out of scope.<br>
                         <strong>A short description of the attraction expands into a full page of information</strong><br>
-                        This feature would provide a slick transition between a short sentence of information into a full page write-up. We considered the complexity of UI work involved in this process to not make it worth implementing. The cost/benefit analysis of this implementation did not make it viable.<br>
+                        This feature would provide a slick transition between a short sentence of information into a full page write-up. We considered the complexity of UI work involved in this process and concluded that it would not be worth implementing. The cost/benefit analysis of this implementation did not make it viable, given that this app is a prototype anyway.<br>
                         <strong>Integration with Beacons</strong><br>
-                        We decided that this project would overlap too much with Spot Market Team 2's work, and that we could still accomplish what we want to achieve without support for Bluetooth Beacons.<br>
+                        We decided that this project would overlap too much with Spot Market Team 2's work, and that we can still accomplish what we want to achieve without support for Bluetooth Beacons.<br>
                         <strong>Any Additional Machine Learning</strong><br>
                         Machine Learning and bot use of it is being handled by Spot Markets Team 1, so we considered this both too complex and out of the scope of our project.<br>
                         <strong>Windows Phone Support</strong><br>
@@ -138,18 +138,18 @@
         </div>
         <h2>Changes in MoSCoW report</h2>
             <div class="well">
-                <p style="font-size:18px !important;">The initial set of MoSCoW requirements were made based on our understanding of the cleint requests; we then re-consulted our clients to fix upon these requirements. We also took user's perspective into consideration through evaluating the heuristics based on our interaction with the prototype of the app. Through the various iterations, we were able to improve user experience at each stage.<p>
+                <p style="font-size:18px !important;">The initial set of MoSCoW requirements were made based on our understanding of the clients' requests; we then re-consulted our clients to fix upon these requirements. We also took the user's perspective into consideration through heuristically evaluating and users' interactions with the prototype of the app. Through the various iterations, we were able to improve user experience at each stage.<p>
                 <div class="well" align="left">
                     <div>
                         <span class="black-text">
                             <ul>
-                                <li> Our initial brief was to create a tourist 'layer' which gave us the option to create 2 things: an app or a bot. After conducting a heavy amount of research, through weighing the pros and cons of each, we decided to create the app.</li>
+                                <li> Our initial brief was to create a tourist 'layer' which gave us the option to create two things: an app or a bot. After conducting a heavy amount of research, through weighing the pros and cons of each, we decided to create the app. This was mainly because a bot cannot get the user's location automatically; it must be sent each time as a chat message, which would slow the experience down.</li>
                                 <br>
-                                <li> Initially we were planning to use the reccomendation engine and build on top of it. However, since we ended up spending too much time trying to get it to work, we had to move on from it and focus on actually creating an app. </li>
+                                <li> Initially, we were planning to use the Spot Markets Recommendation Engine and build on top of it. However, since we ended up spending too much time trying to get it to work and the sample data available was not complete enough for our purposes, we had to move on from it and focus on actually creating an app that would fulfill the remaining requirements.</li>
                                 <br>
-                                <li> Window's phone support was initially included in the 'could have' section. It was decided to be scrapped after considering user needs, for current purposes, the clients and our team unanimously decided to focus on android and iOS.</li>
+                                <li> Windows Phone support was initially included in the 'Could Haves' section. It was decided that even though Xamarin would support Windows Phone 10 and above (using UWP), we would not focus on any platform-specific code for it. This was both because of the market share of Windows Phone being so low, and our clients wanting us to focus mainly on Android and iOS.</li>
                                 <br>
-                                <li> Initially we intrusted to build on top of work produced by previous students. Due to the difficulty in transition and lack of clarity in the documentation provided, we agreed to keep the projects indepenedent until we could produce a sufficient amount of our own work.</li>
+                                <li>Initially we planned to build on top of work produced by previous students. Due to the difficulty in transition and lack of clarity in the documentation provided, we agreed to keep the projects independent until we could produce a sufficient amount of our own work. At this point we would consider integrating the existing projects.</li>
                             </ul>
                         </span>
                     </div>
@@ -161,7 +161,7 @@
                     <div class="well" align="left">
                         <div>
                             <span class="black-text">
-                                <p>EMBEDD VIDEO HERE</p>
+                                <p>EMBED VIDEO HERE</p>
                             </span>
                         </div>
                     </div>
@@ -169,8 +169,7 @@
           </div>
             <div class="container">
                   <h2>Use cases</h2>
-                  <div class="jumbotron">
-                  <table padding="10px" style="border-spacing: 15px;border-collapse: separate;border-style: double;">
+                  <table class="table table-striped table-bordered">
                     <thread>
                     <tr>
                       <th width="300"></th>
@@ -324,7 +323,6 @@
                     </tr>
                   </table>
                 </div>
-            </div>
         </div>
     </body>
 </html>
