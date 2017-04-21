@@ -168,6 +168,24 @@
             </p>
         </div>
     </div>
+
+    <div class="container">
+        <h3>Database Structure</h3>
+        <div class="well">
+            <p>
+                Our database is defined as a series of Python classes. This is converted into SQL DDL using Django Migrations. We have two types of tables: those we defined ourselves, and those automatically created by Django to support the creation of user accounts.
+            </p>
+            <p>
+                Due to the complexity of the Django User Model, and that our usage of the user as a foreign key relies on showing this structure, we used Django Extensions and PyVisGraph to generare an Entity-Relationship Diagram from the existing models.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="well well-lg">
+            <img src="img/models.png" class="img-responsive center-block">
+        </div>
+    </div>
 </body>
 
 </html>
