@@ -1,77 +1,90 @@
 <html>
-    <head>
-        <!-- Bootstrap and jQuery -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT"
-            crossorigin="anonymous">
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous">
-        </script>
 
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <!-- Bootstrap and jQuery -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+    </script>
 
-        <title>Spot Markets Tourist | Design</title>
-    </head>
-    <body>
-        <!-- Navigation bar as per website delivery guidelines -->
-        <div class="container" id="navbar-container">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Spot Markets Tourist | Design</title>
+</head>
+
+<body>
+    <!-- Navigation bar as per website delivery guidelines -->
+    <div class="container" id="navbar-container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">Spot Markets Tourist</a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="requirements.html">Requirements</a></li>
-                            <li><a href="research.html">Research</a></li>
-                            <li><a href="hci.html">HCI</a></li>
-                            <li class="active"><a href="design.html">Design</a></li>
-                            <li><a href="testing.html">Testing</a></li>
-                            <li><a href="evaluation.html">Evaluation</a></li>
-                            <li><a href="management.html">Management</a></li>
-                        </ul>
-                    </div>
+                    <a class="navbar-brand" href="index.html">Spot Markets Tourist</a>
                 </div>
-            </nav>
-        </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="requirements.html">Requirements</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="hci.html">HCI</a></li>
+                        <li class="active"><a href="design.html">Design</a></li>
+                        <li><a href="testing.html">Testing</a></li>
+                        <li><a href="evaluation.html">Evaluation</a></li>
+                        <li><a href="management.html">Management</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-        <div class="container">
+    <div class="container">
 
         <h2 align="left">Design Patterns</h2>
         <div class="well">
-        <ul align="left">
-          <br>
-          <li>
-              <strong>Model View Controller (MVC)</strong><br>
-            Our Django webapp for Kent County Council is built following the Model View Controller architectural pattern. The Model part corresponds to our permanent store for all the data we collect through our webapp, which is the access to our PostgreSQL database. The View is in charge of the User Interface logic of the application as it generates the HTML code and produces its output which is what the user is able to see. The Controller is the interface between the Model and the View and in our webapp. It is responsible for updating the Model based on user input in the View. [1] The entire MVC Django Application is hosted on a Microsoft Azure Ubuntu Linux instance.
-        </li>
-        <br>
-        <li>
-            <strong>Singleton Pattern</strong><br>
-            Singleton Design Pattern is one of the Gang of Four design patterns. We have used it to ensure only a single instance of each class is created in methods where each class is instantiated. One of the ways in which we were able to implement it in C# is by creating a static variable representing a single instance of each class that is required [2].
-        </li>
-        <br>
-        <li>
-            <strong>Model View View-Model (MVVM)</strong><br>
-            The MVVM pattern is used in Microsoft products that use XAML to build user interfaces. The model in the Xamarin app is a class that handles connections between the backend Django application which converts the JSON responses into useful objects that represent Points of Interest. Views are partial classes written in XAML which define the frontend screens. The View-Models are partial classes which can access the User Interface objects instantiated by the XAML code and link the contents of them up to the business logic. Some of this is done automatically by using C# bindings, but in many cases the states of the form (e.g. the locations of the pins on the map, which are set up by using data from the Model) must be directly handled by the View-Model. This is also referred to as the "Code-Behind", as it is the code that lays behind the XAML UI.
-        </li>
-        </ul>
+            <ul align="left">
+                <br>
+                <li>
+                    <strong>Model View Controller (MVC)</strong><br> Our Django webapp for Kent County Council is built following
+                    the Model View Controller architectural pattern. The Model part corresponds to our permanent store for
+                    all the data we collect through our webapp, which is the access to our PostgreSQL database. The View
+                    is in charge of the User Interface logic of the application as it generates the HTML code and produces
+                    its output which is what the user is able to see. The Controller is the interface between the Model and
+                    the View and in our webapp. It is responsible for updating the Model based on user input in the View.
+                    [1] The entire MVC Django Application is hosted on a Microsoft Azure Ubuntu Linux instance.
+                </li>
+                <br>
+                <li>
+                    <strong>Singleton Pattern</strong><br> Singleton Design Pattern is one of the Gang of Four design patterns.
+                    We have used it to ensure only a single instance of each class is created in methods where each class
+                    is instantiated. One of the ways in which we were able to implement it in C# is by creating a static
+                    variable representing a single instance of each class that is required [2].
+                </li>
+                <br>
+                <li>
+                    <strong>Model View View-Model (MVVM)</strong><br> The MVVM pattern is used in Microsoft products that
+                    use XAML to build user interfaces. The model in the Xamarin app is a class that handles connections between
+                    the backend Django application which converts the JSON responses into useful objects that represent Points
+                    of Interest. Views are partial classes written in XAML which define the frontend screens. The View-Models
+                    are partial classes which can access the User Interface objects instantiated by the XAML code and link
+                    the contents of them up to the business logic. Some of this is done automatically by using C# bindings,
+                    but in many cases the states of the form (e.g. the locations of the pins on the map, which are set up
+                    by using data from the Model) must be directly handled by the View-Model. This is also referred to as
+                    the "Code-Behind", as it is the code that lays behind the XAML UI.
+                </li>
+            </ul>
         </div>
         <p align="left">[1] Hopkins, Callum. "PHP Master | The MVC Pattern And PHP, Part 1". SitePoint. N.p., 2017. Web. 3 Apr. 2017.</p>
         <p align="left">[2] "C# In Depth: Implementing The Singleton Pattern". Csharpindepth.com. N.p., 2017. Web. 20 Apr. 2017.</p>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
