@@ -56,6 +56,41 @@
     <div class="container">
         <br>
         <div class="well">
+            <h3>Components Hosted on the Azure VM</h3>
+            <h4>PostgreSQL Database</h4>
+            <p>
+                This database holds all the Points of Interest along with the most recent weather information. Its schema is set up using Django Migrations. It is currently hosted on the Ubuntu Linux Azure VM but it could easily be set up as its own host independently, so long as the environment variables in Django are set up to point to the new host. By default Postgres listens on localhost, TCP Port 5432. As Django is on the same machine, none of the default settings need changing. For security, however, a new password was set up on the PostgreSQL user.
+            </p>
+            <br>
+
+            <h4>Cron</h4>
+            <p>
+                Cron is a scheduling utility that is available on most Linux distributions. It has been configured in our case to execute the weather update Django management command every five minutes to ensure that the app data is current.
+            </p>
+            <br>
+
+            <h4>Python Django Server</h4>
+            <p>
+                The main server code is written in Python using the Django Rest framework. This listens on 0.0.0.0:8000 (e.g. all IPv4 interfaces) so that it can accept incoming connections from clients on port 8000. As this is a prototype, the Django integrated HTTP server is used. However, in an enterprise or production deployment it would be placed behind Nginx using a tool such as gunicorn to handle multiple instances of the application to distribute load. It exposes to the world a JSON API that allows the client application, written in Xamarin, to extract a serialised version of all the POI data so that it can be processed by the device. The Django server also exposes a web interface that allows Kent County Council to Create, Read, Update &amp; Delete (CRUD) all the locations stored in the database.
+            </p>
+            <br>
+
+            <h3>Kent County Council: Web Browser</h3>
+            <p>
+                Employees of the Council can use their web browsers to manipulate the locations stored inside the database using the Django web application. By connecting normally (e.g. not requesting the API directly) in a web browser, the user will be presented with a login screen. Passing this login screen will show the list of locations in the database, along with buttons to edit, delete and add locations. The protocol the web browser uses to talk to Django is standard HTTP. Forms are submitted using POST.
+            </p>
+            <br>
+
+            <h3>OpenWeatherMap API</h3>
+            <p>
+                The OpenWeatherMap API is used both by the Django backend of the application and the Xamarin frontend. The backend makes HTTP GET requests to the API every time the cron job calls the management command. Each of these requests contains the coordinates of each Point of Interest. The API then responds with JSON data corresponding to the weather conditions at each location. The frontend uses standard HTTP GET to download a weather icon corresponding to each type of condition when the user loads the app up. The icon code for each weather type is given via JSON to the frontend when the frontend requests all the other POI data. The frontend then knows which icon for each location to fetch from OpenWeatherMap's server. This saves caching all the icons on our server.
+            </p>
+            <br>
+
+            <h3>Mobile Device: Xamarin</h3>
+            <p>
+                The Xamarin code talks to the Django backend by downloading from it a JSON serialised list of Points of Interest. It then parses these into the ListView that is shown to the user when the app is loaded. For each location there is a weather icon code which it can use to fetch a relevant icon from OpenWeatherMap. The map displayed on screen, as explained on the <a href="research.html">Research</a> page, is dependent on the phone's operating system. In any case, this is abstracted away by using Xamarin.Forms.Maps.
+            </p>
         </div>
     </div>
  <div class="container">
