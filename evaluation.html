@@ -82,7 +82,7 @@
                     <br>
                     <p>It appears as though there is some sort of Flask project in this repository. Opening the Visual Studio solution doesn’t appear to load all the files (is the project broken?)</p>
                     <p>Update on 12th December: we have since had a meeting with Bianca and she updated the code in the respository to a newer version. She informed us that the sln file can be used to set up the environment and that we should call the rest of the Python code directly. However, this has not worked yet, and both parties are currently working to try to get the right requirements installed so that the code will run.</p>
-                    <img style="width: 100%"  src="original/static/img/SpotMarketML.jpg"/>
+                    <img style="width: 100%"  src="img/SpotMarketML.jpg"/>
                   </div>
 
                 </div>
@@ -95,7 +95,7 @@
                     <span class="card-title">SpotMarketML error 2</span>
                     <br>
                     <p>We have been following the Matchbox Recommender deployment guide. Unfortunately, we were stuck on this bit:
-                    <img style="width: 100%"  src="original/static/img/flask.jpg"></p>
+                    <img style="width: 100%"  src="img/flask.jpg"></p>
                     <p>Update on 12th December: we have been informed by Bianca that we must deploy the database first, and that we may not even need this part of the code to deploy to build our section of the app. Even though the code seems broken, we may be able to ignore it and move on with the rest of the project.</p>
                   </div>
 
@@ -109,7 +109,7 @@
                     <span class="card-title">SpotMarketML error 3</span>
                     <br>
                     <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.</p>
-                    <img style="width: 100%"  src="original/static/img/errors.jpg">
+                    <img style="width: 100%"  src="img/errors.jpg">
                   </div>
 
                 </div>
@@ -122,7 +122,7 @@
                     <span class="card-title">SpotMarketML error 4</span>
                     <br>
                     <p>This is because when we run the code, we get errors about not being able to find the FlaskWebProject, despite being within it.
-                    <img style="width: 100%"  src="original/static/img/module.jpg">
+                    <img style="width: 100%"  src="img/module.jpg">
                     </p>
                     <p>
                       Update on 12th December: As mentioned in in error #3, we may be able to work round this with Bianca's help, but it is still a deployment work in progress.
@@ -143,7 +143,7 @@
                       <br>
                       <p>This project out the box from VSTS will not compile under VS2015. I’m not sure if this is because we have an old version of the code, but there is a non-fully-implemented interface by default. This is in Droid/Controllers/SaveAndLoadController.cs.
                         In order to make this compile the following diff was applied:</p>
-                      <img style="width: 100%"  src="original/static/img/hsConsumer.jpg"/>
+                      <img style="width: 100%"  src="img/hsConsumer.jpg"/>
                       <p>We just commented out the default NotImplementedException, but it does not matter as even if we set a breakpoint on that line it is never hit anyway.
 
                         This change appears to make the code compile, but it immediately crashes upon launch in the Android simulator. We have targeted Android 4.4 and 6.0.1 using the latest build tools and SDKs available from Microsoft and Google, including all the latest Xamarin updates. We have also cleared out various Xamarin caches. Even getting it to build was triggering weird Visual Studio errors about not being able to find the SDK but the cache clearing fixed that.
@@ -161,7 +161,7 @@
             </div>
 
           <h2 id="weekly">Weekly log- Term 1</h2>
-          <div class="jumbotron">
+          <div class="well">
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
@@ -276,7 +276,7 @@
             <div class="well">
               <p>We followed the agile methodology and utilisted features of VSTS to create a backlog that assign tasks to each member of the team and tracked their progress.</p>
               <br>
-              <img src="img/vsts.jpg" style="width: 100%" alt="">
+              <img src="img/vsts.jpg" style="width: 100%" alt="" class="img-responsive">
               <br>
               <br>
               <p>This proved to be extremely effective since we were able to see what each member was working on at each point in time. We could start off my having a meeting to break down what needs to be done and splitting the task between us. New tasks are added to the 'New task' column, then the card can be dragged onto 'Active' when being worked on, 'Resolved' when it has been implemented and 'Closed' when everyone in the team has finished code-reviewing and ensured that it works.</p>
